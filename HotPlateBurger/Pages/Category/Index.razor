@@ -43,7 +43,7 @@ else
             @foreach (var category in categories)
             {
                 <tr>
-                    <td>@category.Nombre</td>
+                    <td>@category.Name</td>
                     <td><button class="btn btn-success" @onclick="(() => goModify(category.Id))">Modificar</button></td>
                     <td><button class="btn btn-info" @onclick="(() => goDetail(category.Id))">Detalle</button></td>
                     <td><button class="btn btn-danger" @onclick="(() => goDelete(category.Id))">Eliminar</button></td>
@@ -54,14 +54,14 @@ else
 }
 
 @code {
-    private  Category[]? categories;
+    private  categoryTable[]? categories;
     private CategoryDTO categorybus = new CategoryDTO();
 
     protected override async Task OnInitializedAsync()
     {
         try
         {
-            categories = await http.GetFromJsonAsync<Category[]>("Category");
+            categories = await http.GetFromJsonAsync<categoryTable[]>("Category");
         }
         catch (Exception ex)
         {
@@ -75,7 +75,7 @@ else
         {
             var result = await http.PostAsJsonAsync("Category/Buscar", categorybus);
             var content = await result.Content.ReadAsStringAsync();
-            categories = JsonSerializer.Deserialize<Category[]>(content,
+            categories = JsonSerializer.Deserialize<categoryTable[]>(content,
                 new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
         }
         catch (Exception ex)

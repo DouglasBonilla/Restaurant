@@ -1,0 +1,123 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = HotPlateBurger
+build_property.RootNamespace = HotPlateBurger
+build_property.ProjectDir = C:\Users\Victo\Desktop\Restaurant\HotPlateBurger\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Victo\Desktop\Restaurant\HotPlateBurger
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Victo/Desktop/Restaurant/HotPlateBurger/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Victo/Desktop/Restaurant/HotPlateBurger/Pages/Category/Create.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcnlcQ3JlYXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Victo/Desktop/Restaurant/HotPlateBurger/Pages/Category/Delete.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcnlcRGVsZXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Victo/Desktop/Restaurant/HotPlateBurger/Pages/Category/Edit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcnlcRWRpdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Victo/Desktop/Restaurant/HotPlateBurger/Pages/Category/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcnlcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Victo/Desktop/Restaurant/HotPlateBurger/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Victo/Desktop/Restaurant/HotPlateBurger/Pages/FetchData.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Victo/Desktop/Restaurant/HotPlateBurger/Pages/Food/Create.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9vZFxDcmVhdGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Victo/Desktop/Restaurant/HotPlateBurger/Pages/Food/Delete.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9vZFxEZWxldGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Victo/Desktop/Restaurant/HotPlateBurger/Pages/Food/Edit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9vZFxFZGl0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Victo/Desktop/Restaurant/HotPlateBurger/Pages/Food/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9vZFxJbmRleC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Victo/Desktop/Restaurant/HotPlateBurger/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Victo/Desktop/Restaurant/HotPlateBurger/Pages/Order/Create.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JkZXJcQ3JlYXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Victo/Desktop/Restaurant/HotPlateBurger/Pages/Order/Delete.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JkZXJcRGVsZXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Victo/Desktop/Restaurant/HotPlateBurger/Pages/Order/Edit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JkZXJcRWRpdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Victo/Desktop/Restaurant/HotPlateBurger/Pages/Order/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JkZXJcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Victo/Desktop/Restaurant/HotPlateBurger/Pages/User/Create.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxDcmVhdGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Victo/Desktop/Restaurant/HotPlateBurger/Pages/User/Delete.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxEZWxldGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Victo/Desktop/Restaurant/HotPlateBurger/Pages/User/Edit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxFZGl0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Victo/Desktop/Restaurant/HotPlateBurger/Pages/User/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxJbmRleC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Victo/Desktop/Restaurant/HotPlateBurger/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Victo/Desktop/Restaurant/HotPlateBurger/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Victo/Desktop/Restaurant/HotPlateBurger/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-ft3ilrng17
+
+[C:/Users/Victo/Desktop/Restaurant/HotPlateBurger/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-80ys5e99b6
+
+[C:/Users/Victo/Desktop/Restaurant/HotPlateBurger/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Victo/Desktop/Restaurant/HotPlateBurger/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 

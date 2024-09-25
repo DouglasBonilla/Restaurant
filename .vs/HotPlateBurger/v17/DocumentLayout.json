@@ -9,6 +9,33 @@
     {
       "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\victo\\desktop\\restaurant\\hotplateburger\\pages\\category\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\pages\\category\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\victo\\desktop\\restaurant\\hotplateburger\\hotplateburger.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\hotplateburger.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\victo\\desktop\\restaurant\\hotplateburger\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\victo\\desktop\\restaurant\\hotplateburger\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\victo\\desktop\\restaurant\\hotplateburger\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\victo\\desktop\\restaurant\\hotplateburger\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\victo\\desktop\\restaurant\\hotplateburger\\data\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\data\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +45,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,13 +61,103 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HotPlateBurger",
+              "DocumentMoniker": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\HotPlateBurger.csproj",
+              "RelativeDocumentMoniker": "HotPlateBurger\\HotPlateBurger.csproj",
+              "ToolTip": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\HotPlateBurger.csproj",
+              "RelativeToolTip": "HotPlateBurger\\HotPlateBurger.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-09-25T21:45:49.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\_Imports.razor",
+              "RelativeDocumentMoniker": "HotPlateBurger\\_Imports.razor",
+              "ToolTip": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\_Imports.razor",
+              "RelativeToolTip": "HotPlateBurger\\_Imports.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-25T21:42:03.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "App.razor",
+              "DocumentMoniker": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\App.razor",
+              "RelativeDocumentMoniker": "HotPlateBurger\\App.razor",
+              "ToolTip": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\App.razor",
+              "RelativeToolTip": "HotPlateBurger\\App.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-25T21:42:00.913Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\appsettings.json",
+              "RelativeDocumentMoniker": "HotPlateBurger\\appsettings.json",
+              "ToolTip": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\appsettings.json",
+              "RelativeToolTip": "HotPlateBurger\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-25T21:41:54.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\Program.cs",
+              "RelativeDocumentMoniker": "HotPlateBurger\\Program.cs",
+              "ToolTip": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\Program.cs",
+              "RelativeToolTip": "HotPlateBurger\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T21:05:36.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CategoryDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\Data\\CategoryDTO.cs",
+              "RelativeDocumentMoniker": "HotPlateBurger\\Data\\CategoryDTO.cs",
+              "ToolTip": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\Data\\CategoryDTO.cs",
+              "RelativeToolTip": "HotPlateBurger\\Data\\CategoryDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T20:41:11.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AgIAAF4JAAAAAAAAAAAswGsJAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2024-09-25T20:38:15.499Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "NavMenu.razor",
               "DocumentMoniker": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\Shared\\NavMenu.razor",
               "RelativeDocumentMoniker": "HotPlateBurger\\Shared\\NavMenu.razor",
-              "ToolTip": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\Shared\\NavMenu.razor",
-              "RelativeToolTip": "HotPlateBurger\\Shared\\NavMenu.razor",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAsAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\Shared\\NavMenu.razor*",
+              "RelativeToolTip": "HotPlateBurger\\Shared\\NavMenu.razor*",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-09-25T20:36:32.141Z",
               "EditorCaption": ""
@@ -53,9 +170,10 @@
               "RelativeDocumentMoniker": "HotPlateBurger\\Pages\\Category\\Index.razor",
               "ToolTip": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\Pages\\Category\\Index.razor",
               "RelativeToolTip": "HotPlateBurger\\Pages\\Category\\Index.razor",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAADkAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-25T20:22:19.986Z"
+              "WhenOpened": "2024-09-25T20:22:19.986Z",
+              "EditorCaption": ""
             }
           ]
         }
