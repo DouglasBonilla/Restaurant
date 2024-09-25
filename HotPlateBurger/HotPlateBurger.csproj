@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="SysSeguridadG05.EN">
-      <HintPath>..\..\..\..\Desktop\Sistema\SysSeguridadG05.EN.dll</HintPath>
+    <Reference Include="HotPlateRestaurant.EN">
+      <HintPath>..\..\..\..\Desktop\dll\HotPlateRestaurant.EN.dll</HintPath>
     </Reference>
   </ItemGroup>
 
