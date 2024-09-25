@@ -6,4 +6,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="SysSeguridadG05.EN">
+      <HintPath>..\..\..\..\Desktop\Sistema\SysSeguridadG05.EN.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
