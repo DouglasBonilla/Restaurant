@@ -1,7 +1,4 @@
 ﻿@page "/category/index"
-@using System.Text.Json;
-@using HotPlateRestaurant.EN;
-@using HotPlateBurger.Data;
 @inject HttpClient http
 @inject NavigationManager NavManager;
 
@@ -61,7 +58,7 @@ else
     {
         try
         {
-            categories = await http.GetFromJsonAsync<categoryTable[]>("Category");
+            categories = await http.GetFromJsonAsync<categoryTable[]>("categoryTable");
         }
         catch (Exception ex)
         {

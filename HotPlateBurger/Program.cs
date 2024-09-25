@@ -10,7 +10,7 @@ builder.Services.AddServerSideBlazor();
 
 builder.Services.AddScoped(sp => new HttpClient
 {
-    BaseAddress = new Uri("https://localhost:7264/api/")
+    BaseAddress = new Uri("http://HotPlateBurgerss.somee.com/api/")
 });
 
 var app = builder.Build();
