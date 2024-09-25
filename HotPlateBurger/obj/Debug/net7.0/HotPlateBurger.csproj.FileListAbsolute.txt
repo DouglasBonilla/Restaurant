@@ -1,0 +1,9 @@
+C:\Users\Victo\Desktop\Restaurant\HotPlateBurger\obj\Debug\net7.0\HotPlateBurger.csproj.AssemblyReference.cache
+C:\Users\Victo\Desktop\Restaurant\HotPlateBurger\obj\Debug\net7.0\HotPlateBurger.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Victo\Desktop\Restaurant\HotPlateBurger\obj\Debug\net7.0\HotPlateBurger.AssemblyInfoInputs.cache
+C:\Users\Victo\Desktop\Restaurant\HotPlateBurger\obj\Debug\net7.0\HotPlateBurger.AssemblyInfo.cs
+C:\Users\Victo\Desktop\Restaurant\HotPlateBurger\obj\Debug\net7.0\HotPlateBurger.csproj.CoreCompileInputs.cache
+C:\Users\Victo\Desktop\Restaurant\HotPlateBurger\obj\Debug\net7.0\HotPlateBurger.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Victo\Desktop\Restaurant\HotPlateBurger\obj\Debug\net7.0\HotPlateBurger.RazorAssemblyInfo.cache
+C:\Users\Victo\Desktop\Restaurant\HotPlateBurger\obj\Debug\net7.0\HotPlateBurger.RazorAssemblyInfo.cs
+C:\Users\Victo\Desktop\Restaurant\HotPlateBurger\obj\Debug\net7.0\HotPlateBurger.sourcelink.json

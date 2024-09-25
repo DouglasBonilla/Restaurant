@@ -1,85 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Escobar\\source\\repos\\HotPlateBurger\\",
+  "WorkspaceRootPath": "C:\\Users\\Victo\\Desktop\\Restaurant\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\escobar\\source\\repos\\hotplateburger\\hotplateburger\\data\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\data\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\victo\\desktop\\restaurant\\hotplateburger\\shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\escobar\\source\\repos\\hotplateburger\\hotplateburger\\data\\fooddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\data\\fooddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\escobar\\source\\repos\\hotplateburger\\hotplateburger\\data\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\data\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\escobar\\source\\repos\\hotplateburger\\hotplateburger\\data\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\data\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\escobar\\source\\repos\\hotplateburger\\hotplateburger\\pages\\user\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\pages\\user\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\escobar\\source\\repos\\hotplateburger\\hotplateburger\\pages\\user\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\pages\\user\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\escobar\\source\\repos\\hotplateburger\\hotplateburger\\pages\\user\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\pages\\user\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\escobar\\source\\repos\\hotplateburger\\hotplateburger\\pages\\user\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\pages\\user\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\escobar\\source\\repos\\hotplateburger\\hotplateburger\\pages\\order\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\pages\\order\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\escobar\\source\\repos\\hotplateburger\\hotplateburger\\pages\\order\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\pages\\order\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\escobar\\source\\repos\\hotplateburger\\hotplateburger\\pages\\order\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\pages\\order\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\escobar\\source\\repos\\hotplateburger\\hotplateburger\\pages\\order\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\pages\\order\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\escobar\\source\\repos\\hotplateburger\\hotplateburger\\pages\\food\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\pages\\food\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\escobar\\source\\repos\\hotplateburger\\hotplateburger\\pages\\food\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\pages\\food\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\escobar\\source\\repos\\hotplateburger\\hotplateburger\\pages\\food\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\pages\\food\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\escobar\\source\\repos\\hotplateburger\\hotplateburger\\pages\\food\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\pages\\food\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\escobar\\source\\repos\\hotplateburger\\hotplateburger\\pages\\category\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\pages\\category\\delete.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\escobar\\source\\repos\\hotplateburger\\hotplateburger\\pages\\category\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\pages\\category\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\escobar\\source\\repos\\hotplateburger\\hotplateburger\\pages\\category\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\pages\\category\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\escobar\\source\\repos\\hotplateburger\\hotplateburger\\pages\\category\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\victo\\desktop\\restaurant\\hotplateburger\\pages\\category\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\pages\\category\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -107,243 +35,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "OrderDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Escobar\\source\\repos\\HotPlateBurger\\HotPlateBurger\\Data\\OrderDTO.cs",
-              "RelativeDocumentMoniker": "HotPlateBurger\\Data\\OrderDTO.cs",
-              "ToolTip": "C:\\Users\\Escobar\\source\\repos\\HotPlateBurger\\HotPlateBurger\\Data\\OrderDTO.cs",
-              "RelativeToolTip": "HotPlateBurger\\Data\\OrderDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T19:38:28.715Z",
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\Shared\\NavMenu.razor",
+              "RelativeDocumentMoniker": "HotPlateBurger\\Shared\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\Shared\\NavMenu.razor",
+              "RelativeToolTip": "HotPlateBurger\\Shared\\NavMenu.razor",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-25T20:36:32.141Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FoodDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Escobar\\source\\repos\\HotPlateBurger\\HotPlateBurger\\Data\\FoodDTO.cs",
-              "RelativeDocumentMoniker": "HotPlateBurger\\Data\\FoodDTO.cs",
-              "ToolTip": "C:\\Users\\Escobar\\source\\repos\\HotPlateBurger\\HotPlateBurger\\Data\\FoodDTO.cs",
-              "RelativeToolTip": "HotPlateBurger\\Data\\FoodDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T19:38:14.188Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Escobar\\source\\repos\\HotPlateBurger\\HotPlateBurger\\Data\\UserDTO.cs",
-              "RelativeDocumentMoniker": "HotPlateBurger\\Data\\UserDTO.cs",
-              "ToolTip": "C:\\Users\\Escobar\\source\\repos\\HotPlateBurger\\HotPlateBurger\\Data\\UserDTO.cs",
-              "RelativeToolTip": "HotPlateBurger\\Data\\UserDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T19:37:54.863Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CategoryDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Escobar\\source\\repos\\HotPlateBurger\\HotPlateBurger\\Data\\CategoryDTO.cs",
-              "RelativeDocumentMoniker": "HotPlateBurger\\Data\\CategoryDTO.cs",
-              "ToolTip": "C:\\Users\\Escobar\\source\\repos\\HotPlateBurger\\HotPlateBurger\\Data\\CategoryDTO.cs",
-              "RelativeToolTip": "HotPlateBurger\\Data\\CategoryDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T19:37:03.97Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Create.razor",
-              "DocumentMoniker": "C:\\Users\\Escobar\\source\\repos\\HotPlateBurger\\HotPlateBurger\\Pages\\User\\Create.razor",
-              "RelativeDocumentMoniker": "HotPlateBurger\\Pages\\User\\Create.razor",
-              "ToolTip": "C:\\Users\\Escobar\\source\\repos\\HotPlateBurger\\HotPlateBurger\\Pages\\User\\Create.razor",
-              "RelativeToolTip": "HotPlateBurger\\Pages\\User\\Create.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-25T19:35:04.796Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Delete.razor",
-              "DocumentMoniker": "C:\\Users\\Escobar\\source\\repos\\HotPlateBurger\\HotPlateBurger\\Pages\\User\\Delete.razor",
-              "RelativeDocumentMoniker": "HotPlateBurger\\Pages\\User\\Delete.razor",
-              "ToolTip": "C:\\Users\\Escobar\\source\\repos\\HotPlateBurger\\HotPlateBurger\\Pages\\User\\Delete.razor",
-              "RelativeToolTip": "HotPlateBurger\\Pages\\User\\Delete.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-25T19:34:52.961Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Edit.razor",
-              "DocumentMoniker": "C:\\Users\\Escobar\\source\\repos\\HotPlateBurger\\HotPlateBurger\\Pages\\User\\Edit.razor",
-              "RelativeDocumentMoniker": "HotPlateBurger\\Pages\\User\\Edit.razor",
-              "ToolTip": "C:\\Users\\Escobar\\source\\repos\\HotPlateBurger\\HotPlateBurger\\Pages\\User\\Edit.razor",
-              "RelativeToolTip": "HotPlateBurger\\Pages\\User\\Edit.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-25T19:34:42.89Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "Index.razor",
-              "DocumentMoniker": "C:\\Users\\Escobar\\source\\repos\\HotPlateBurger\\HotPlateBurger\\Pages\\User\\Index.razor",
-              "RelativeDocumentMoniker": "HotPlateBurger\\Pages\\User\\Index.razor",
-              "ToolTip": "C:\\Users\\Escobar\\source\\repos\\HotPlateBurger\\HotPlateBurger\\Pages\\User\\Index.razor",
-              "RelativeToolTip": "HotPlateBurger\\Pages\\User\\Index.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-25T19:34:34.684Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Create.razor",
-              "DocumentMoniker": "C:\\Users\\Escobar\\source\\repos\\HotPlateBurger\\HotPlateBurger\\Pages\\Order\\Create.razor",
-              "RelativeDocumentMoniker": "HotPlateBurger\\Pages\\Order\\Create.razor",
-              "ToolTip": "C:\\Users\\Escobar\\source\\repos\\HotPlateBurger\\HotPlateBurger\\Pages\\Order\\Create.razor",
-              "RelativeToolTip": "HotPlateBurger\\Pages\\Order\\Create.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-25T19:34:15.299Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Delete.razor",
-              "DocumentMoniker": "C:\\Users\\Escobar\\source\\repos\\HotPlateBurger\\HotPlateBurger\\Pages\\Order\\Delete.razor",
-              "RelativeDocumentMoniker": "HotPlateBurger\\Pages\\Order\\Delete.razor",
-              "ToolTip": "C:\\Users\\Escobar\\source\\repos\\HotPlateBurger\\HotPlateBurger\\Pages\\Order\\Delete.razor",
-              "RelativeToolTip": "HotPlateBurger\\Pages\\Order\\Delete.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-25T19:34:07.139Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Edit.razor",
-              "DocumentMoniker": "C:\\Users\\Escobar\\source\\repos\\HotPlateBurger\\HotPlateBurger\\Pages\\Order\\Edit.razor",
-              "RelativeDocumentMoniker": "HotPlateBurger\\Pages\\Order\\Edit.razor",
-              "ToolTip": "C:\\Users\\Escobar\\source\\repos\\HotPlateBurger\\HotPlateBurger\\Pages\\Order\\Edit.razor",
-              "RelativeToolTip": "HotPlateBurger\\Pages\\Order\\Edit.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-25T19:33:56.216Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Index.razor",
-              "DocumentMoniker": "C:\\Users\\Escobar\\source\\repos\\HotPlateBurger\\HotPlateBurger\\Pages\\Order\\Index.razor",
-              "RelativeDocumentMoniker": "HotPlateBurger\\Pages\\Order\\Index.razor",
-              "ToolTip": "C:\\Users\\Escobar\\source\\repos\\HotPlateBurger\\HotPlateBurger\\Pages\\Order\\Index.razor",
-              "RelativeToolTip": "HotPlateBurger\\Pages\\Order\\Index.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-25T19:33:47.057Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Delete.razor",
-              "DocumentMoniker": "C:\\Users\\Escobar\\source\\repos\\HotPlateBurger\\HotPlateBurger\\Pages\\Food\\Delete.razor",
-              "RelativeDocumentMoniker": "HotPlateBurger\\Pages\\Food\\Delete.razor",
-              "ToolTip": "C:\\Users\\Escobar\\source\\repos\\HotPlateBurger\\HotPlateBurger\\Pages\\Food\\Delete.razor",
-              "RelativeToolTip": "HotPlateBurger\\Pages\\Food\\Delete.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-25T19:33:36.951Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Create.razor",
-              "DocumentMoniker": "C:\\Users\\Escobar\\source\\repos\\HotPlateBurger\\HotPlateBurger\\Pages\\Food\\Create.razor",
-              "RelativeDocumentMoniker": "HotPlateBurger\\Pages\\Food\\Create.razor",
-              "ToolTip": "C:\\Users\\Escobar\\source\\repos\\HotPlateBurger\\HotPlateBurger\\Pages\\Food\\Create.razor",
-              "RelativeToolTip": "HotPlateBurger\\Pages\\Food\\Create.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-25T19:33:27.898Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Edit.razor",
-              "DocumentMoniker": "C:\\Users\\Escobar\\source\\repos\\HotPlateBurger\\HotPlateBurger\\Pages\\Food\\Edit.razor",
-              "RelativeDocumentMoniker": "HotPlateBurger\\Pages\\Food\\Edit.razor",
-              "ToolTip": "C:\\Users\\Escobar\\source\\repos\\HotPlateBurger\\HotPlateBurger\\Pages\\Food\\Edit.razor",
-              "RelativeToolTip": "HotPlateBurger\\Pages\\Food\\Edit.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-25T19:33:11.876Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Index.razor",
-              "DocumentMoniker": "C:\\Users\\Escobar\\source\\repos\\HotPlateBurger\\HotPlateBurger\\Pages\\Food\\Index.razor",
-              "RelativeDocumentMoniker": "HotPlateBurger\\Pages\\Food\\Index.razor",
-              "ToolTip": "C:\\Users\\Escobar\\source\\repos\\HotPlateBurger\\HotPlateBurger\\Pages\\Food\\Index.razor",
-              "RelativeToolTip": "HotPlateBurger\\Pages\\Food\\Index.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-25T19:33:02.059Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Delete.razor",
-              "DocumentMoniker": "C:\\Users\\Escobar\\source\\repos\\HotPlateBurger\\HotPlateBurger\\Pages\\Category\\Delete.razor",
-              "RelativeDocumentMoniker": "HotPlateBurger\\Pages\\Category\\Delete.razor",
-              "ToolTip": "C:\\Users\\Escobar\\source\\repos\\HotPlateBurger\\HotPlateBurger\\Pages\\Category\\Delete.razor",
-              "RelativeToolTip": "HotPlateBurger\\Pages\\Category\\Delete.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-25T19:32:43.461Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Edit.razor",
-              "DocumentMoniker": "C:\\Users\\Escobar\\source\\repos\\HotPlateBurger\\HotPlateBurger\\Pages\\Category\\Edit.razor",
-              "RelativeDocumentMoniker": "HotPlateBurger\\Pages\\Category\\Edit.razor",
-              "ToolTip": "C:\\Users\\Escobar\\source\\repos\\HotPlateBurger\\HotPlateBurger\\Pages\\Category\\Edit.razor",
-              "RelativeToolTip": "HotPlateBurger\\Pages\\Category\\Edit.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-25T19:32:32.265Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Create.razor",
-              "DocumentMoniker": "C:\\Users\\Escobar\\source\\repos\\HotPlateBurger\\HotPlateBurger\\Pages\\Category\\Create.razor",
-              "RelativeDocumentMoniker": "HotPlateBurger\\Pages\\Category\\Create.razor",
-              "ToolTip": "C:\\Users\\Escobar\\source\\repos\\HotPlateBurger\\HotPlateBurger\\Pages\\Category\\Create.razor",
-              "RelativeToolTip": "HotPlateBurger\\Pages\\Category\\Create.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-25T19:32:17.509Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Index.razor",
-              "DocumentMoniker": "C:\\Users\\Escobar\\source\\repos\\HotPlateBurger\\HotPlateBurger\\Pages\\Category\\Index.razor",
+              "DocumentMoniker": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\Pages\\Category\\Index.razor",
               "RelativeDocumentMoniker": "HotPlateBurger\\Pages\\Category\\Index.razor",
-              "ToolTip": "C:\\Users\\Escobar\\source\\repos\\HotPlateBurger\\HotPlateBurger\\Pages\\Category\\Index.razor",
+              "ToolTip": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\Pages\\Category\\Index.razor",
               "RelativeToolTip": "HotPlateBurger\\Pages\\Category\\Index.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAADkAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-25T19:30:29.79Z"
+              "WhenOpened": "2024-09-25T20:22:19.986Z"
             }
           ]
         }

@@ -1,5 +1,107 @@
-﻿<h3>Index</h3>
+﻿@page "/category/index"
+@using System.Text.Json;
+@using HotPlateRestaurant.EN;
+@using HotPlateBurger.Data;
+@inject HttpClient http
+@inject NavigationManager NavManager;
+
+<PageTitle>Index</PageTitle>
+
+<button id="idNuevo" class="btn btn-primary" @onclick="newCategory">Nueva Categoria</button>
+
+<h3>Buscar</h3>
+<div class="row">
+    <div class="col-sm-12">
+        <label class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="idBusNombre" @bind-value="categorybus.Nombre" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <button class="btn btn-primary" @onclick="BuscarCategory">Buscar</button>
+    </div>
+</div>
+
+@if (categories == null)
+{
+    <p><em>Loading...</em></p>
+}
+else if (!categories.Any())
+{
+    <p>No categories found.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var category in categories)
+            {
+                <tr>
+                    <td>@category.Nombre</td>
+                    <td><button class="btn btn-success" @onclick="(() => goModify(category.Id))">Modificar</button></td>
+                    <td><button class="btn btn-info" @onclick="(() => goDetail(category.Id))">Detalle</button></td>
+                    <td><button class="btn btn-danger" @onclick="(() => goDelete(category.Id))">Eliminar</button></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
 
 @code {
+    private  Category[]? categories;
+    private CategoryDTO categorybus = new CategoryDTO();
 
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            categories = await http.GetFromJsonAsync<Category[]>("Category");
+        }
+        catch (Exception ex)
+        {
+            throw new Exception(ex.Message);
+        }
+    }
+
+    private async Task BuscarCategory()
+    {
+        try
+        {
+            var result = await http.PostAsJsonAsync("Category/Buscar", categorybus);
+            var content = await result.Content.ReadAsStringAsync();
+            categories = JsonSerializer.Deserialize<Category[]>(content,
+                new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+        }
+        catch (Exception ex)
+        {
+            throw new Exception($"Error while searching for categories: {ex.Message}");
+        }
+        StateHasChanged();
+    }
+
+    void newCategory()
+    {
+        NavManager.NavigateTo("/category/create");
+    }
+
+    void goModify(int pId)
+    {
+        NavManager.NavigateTo($"/category/edit/{pId}");
+    }
+
+    void goDetail(int pId)
+    {
+        NavManager.NavigateTo($"/category/detail/{pId}");
+    }
+
+    void goDelete(int pId)
+    {
+        NavManager.NavigateTo($"/category/delete/{pId}");
+    }
 }
