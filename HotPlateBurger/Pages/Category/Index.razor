@@ -10,12 +10,12 @@
 <div class="row">
     <div class="col-sm-12">
         <label class="form-label">Nombre</label>
-        <input type="text" class="form-control" id="idBusNombre" @bind-value="categorybus.Nombre" />
+        <input type="text" class="form-control" id="idBusNombre" @bind-value="categorybus.Name" />
     </div>
 </div>
 <div class="row">
     <div class="col-sm-12">
-        <button class="btn btn-primary" @onclick="BuscarCategory">Buscar</button>
+        <button class="btn btn-primary" @onclick="BuscarCategoria">Buscar</button>
     </div>
 </div>
 
@@ -66,19 +66,12 @@ else
         }
     }
 
-    private async Task BuscarCategory()
+    private async void BuscarCategoria()
     {
-        try
-        {
-            var result = await http.PostAsJsonAsync("Category/Buscar", categorybus);
-            var content = await result.Content.ReadAsStringAsync();
-            categories = JsonSerializer.Deserialize<categoryTable[]>(content,
-                new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
-        }
-        catch (Exception ex)
-        {
-            throw new Exception($"Error while searching for categories: {ex.Message}");
-        }
+        var result = await http.PostAsJsonAsync("categoryTable/Buscar", categorybus);
+        var content = await result.Content.ReadAsStringAsync();
+        categories = JsonSerializer.Deserialize<categoryTable[]>(content,
+            new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
         StateHasChanged();
     }
 

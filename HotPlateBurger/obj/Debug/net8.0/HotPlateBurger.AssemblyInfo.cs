@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HotPlateBurger")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6312dd66b47cfe8b3f03d9641ef8c155db1a67d5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+265f17673c85009782ad94008acce2b61f2da35b")]
 [assembly: System.Reflection.AssemblyProductAttribute("HotPlateBurger")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HotPlateBurger")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

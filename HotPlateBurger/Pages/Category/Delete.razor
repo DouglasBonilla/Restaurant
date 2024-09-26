@@ -1,5 +1,85 @@
-﻿<h3>Delete</h3>
+﻿@page "/category/delete/{pId:int}"
+@inject HttpClient http
+@inject NavigationManager NavManager;
+
+<h3>Delete Rol</h3>
+
+<input type="hidden" id="idRol" @bind-value="category.Id" />
+<div class="row">
+    <div class="col-sm-12">
+        <label class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="idNombre" @bind-value="category.Name" disabled />
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12 m-3">
+        <button class="btn btn-danger" @onclick="deleteCategory">Eliminar</button>
+        <button class="btn btn-secondary" @onclick="Index">Regresar</button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12">
+        <span style="color: red; font-weight: bold">@error</span>
+    </div>
+</div>
 
 @code {
+    categoryTable category = new categoryTable();
+    string error = "";
 
+    [Parameter]
+    public int pId { get; set; }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        try
+        {
+            if (pId != 0)
+            {
+                category = await http.GetFromJsonAsync<categoryTable>($"categoryTable/{pId}");
+                if (category == null)
+                {
+                    error = "La categoria no fue encontrada.";
+                }
+            }
+            else
+            {
+                error = "Categoria seleccionada no es válida.";
+            }
+        }
+        catch (Exception ex)
+        {
+            error = $"Error al cargar la categoria: {ex.Message}";
+        }
+    }
+
+    public async Task deleteCategory()
+    {
+        try
+        {
+            var resultado = await http.DeleteAsync("categoryTable/" + category.Id);
+            if (resultado.IsSuccessStatusCode)
+            {
+                // Call Index or refresh the page after successful deletion
+                Index();
+            }
+            else
+            {
+                // Update error message to indicate deletion instead of modification
+                error = "Error al eliminar el registro de categoria";
+            }
+        }
+        catch (Exception ex)
+        {
+            // Handle exceptions and display the error message
+            error = $"Error al eliminar la categoria: {ex.Message}";
+        }
+    }
+
+    void Index()
+    {
+        NavManager.NavigateTo("/category/index");
+    }
 }

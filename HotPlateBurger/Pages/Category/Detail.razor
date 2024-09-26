@@ -1,8 +1,8 @@
-﻿@page "/category/edit/{pId:int}"
+﻿@page "/category/detail/{pId:int}"
 @inject HttpClient http
 @inject NavigationManager NavManager;
 
-<PageTitle>Editar Categoria</PageTitle>
+<h3>Detalles de Rol</h3>
 
 <input type="hidden" id="idCategory" @bind-value="category.Id" />
 <div class="row">
@@ -14,7 +14,7 @@
 
 <div class="row">
     <div class="col-sm-12 m-3">
-        <button class="btn btn-primary" @onclick="ModificarCategoria">Guardar</button>
+        <button class="btn btn-primary" @onclick="EnviarModificarCategoria">Enviar a modificar</button>
         <button class="btn btn-secondary" @onclick="Index">Regresar</button>
     </div>
 </div>
@@ -24,7 +24,6 @@
         <span style="color: red; font-weight: bold">@error</span>
     </div>
 </div>
-
 
 @code {
     categoryTable category = new categoryTable();
@@ -37,35 +36,19 @@
     {
         if (pId != 0)
         {
-            category = await http.GetFromJsonAsync<categoryTable>("categoryTable/" + pId);
+            category = await http.GetFromJsonAsync<categoryTable>($"categoryTable/{pId}");
         }
         else
         {
-            error = "Categoria seleccionada no válida";
+            error = "Categoría seleccionada no válida";
         }
     }
-    public async Task ModificarCategoria()
-{
-    try
+    public async Task EnviarModificarCategoria()
     {
-        var resultado = await http.PutAsJsonAsync("categoryTable/" + category.Id, category);
-
-        if (resultado.IsSuccessStatusCode)
-        {
-            NavManager.NavigateTo("/category/index");
-        }
-        else
-        {
-            error = $"Error al modificar la categoría. Código de estado: {resultado.StatusCode}";
-        }
+        NavManager.NavigateTo("/category/edit/" + pId);
     }
-    catch (Exception ex)
-    {
-        error = $"Ocurrió un error: {ex.Message}";
-    }
-}
 
-    void Index()
+    public async Task Index()
     {
         NavManager.NavigateTo("/category/index");
     }

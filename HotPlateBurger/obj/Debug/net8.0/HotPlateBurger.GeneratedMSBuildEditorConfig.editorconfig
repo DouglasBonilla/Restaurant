@@ -30,6 +30,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcnlcRGVsZXRlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Victo/Desktop/Restaurant/HotPlateBurger/Pages/Category/Detail.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcnlcRGV0YWlsLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Victo/Desktop/Restaurant/HotPlateBurger/Pages/Category/Edit.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcnlcRWRpdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

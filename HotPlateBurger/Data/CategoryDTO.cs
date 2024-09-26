@@ -6,7 +6,7 @@ namespace HotPlateBurger.Data
     {
         public int Id { get; set; }
 
-        public String Nombre { get; set; }
+        public String Name { get; set; }
         [NotMapped]
         public int Top_Aux { get; set; }
     }
