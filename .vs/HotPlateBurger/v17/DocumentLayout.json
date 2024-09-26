@@ -3,6 +3,34 @@
   "WorkspaceRootPath": "C:\\Users\\henry\\Desktop\\HotPlateBurger-Blazor\\Restaurant\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\henry\\desktop\\hotplateburger-blazor\\restaurant\\hotplateburger\\shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\henry\\desktop\\hotplateburger-blazor\\restaurant\\hotplateburger\\pages\\_host.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\pages\\_host.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\henry\\desktop\\hotplateburger-blazor\\restaurant\\hotplateburger\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\henry\\desktop\\hotplateburger-blazor\\restaurant\\hotplateburger\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\henry\\desktop\\hotplateburger-blazor\\restaurant\\hotplateburger\\shared\\surveyprompt.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\shared\\surveyprompt.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\henry\\desktop\\hotplateburger-blazor\\restaurant\\hotplateburger\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\henry\\desktop\\hotplateburger-blazor\\restaurant\\hotplateburger\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\henry\\desktop\\hotplateburger-blazor\\restaurant\\hotplateburger\\pages\\user\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\pages\\user\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
@@ -14,11 +42,102 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Host.cshtml",
+              "DocumentMoniker": "C:\\Users\\henry\\Desktop\\HotPlateBurger-Blazor\\Restaurant\\HotPlateBurger\\Pages\\_Host.cshtml",
+              "RelativeDocumentMoniker": "HotPlateBurger\\Pages\\_Host.cshtml",
+              "ToolTip": "C:\\Users\\henry\\Desktop\\HotPlateBurger-Blazor\\Restaurant\\HotPlateBurger\\Pages\\_Host.cshtml",
+              "RelativeToolTip": "HotPlateBurger\\Pages\\_Host.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAAoAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-26T05:06:55.675Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\henry\\Desktop\\HotPlateBurger-Blazor\\Restaurant\\HotPlateBurger\\Program.cs",
+              "RelativeDocumentMoniker": "HotPlateBurger\\Program.cs",
+              "ToolTip": "C:\\Users\\henry\\Desktop\\HotPlateBurger-Blazor\\Restaurant\\HotPlateBurger\\Program.cs",
+              "RelativeToolTip": "HotPlateBurger\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T04:43:51.049Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "C:\\Users\\henry\\Desktop\\HotPlateBurger-Blazor\\Restaurant\\HotPlateBurger\\_Imports.razor",
+              "RelativeDocumentMoniker": "HotPlateBurger\\_Imports.razor",
+              "ToolTip": "C:\\Users\\henry\\Desktop\\HotPlateBurger-Blazor\\Restaurant\\HotPlateBurger\\_Imports.razor",
+              "RelativeToolTip": "HotPlateBurger\\_Imports.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-26T04:46:48.084Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\henry\\Desktop\\HotPlateBurger-Blazor\\Restaurant\\HotPlateBurger\\Shared\\NavMenu.razor",
+              "RelativeDocumentMoniker": "HotPlateBurger\\Shared\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\henry\\Desktop\\HotPlateBurger-Blazor\\Restaurant\\HotPlateBurger\\Shared\\NavMenu.razor",
+              "RelativeToolTip": "HotPlateBurger\\Shared\\NavMenu.razor",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAcwBwAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-26T04:34:27.388Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SurveyPrompt.razor",
+              "DocumentMoniker": "C:\\Users\\henry\\Desktop\\HotPlateBurger-Blazor\\Restaurant\\HotPlateBurger\\Shared\\SurveyPrompt.razor",
+              "RelativeDocumentMoniker": "HotPlateBurger\\Shared\\SurveyPrompt.razor",
+              "ToolTip": "C:\\Users\\henry\\Desktop\\HotPlateBurger-Blazor\\Restaurant\\HotPlateBurger\\Shared\\SurveyPrompt.razor",
+              "RelativeToolTip": "HotPlateBurger\\Shared\\SurveyPrompt.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-26T04:56:55.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\henry\\Desktop\\HotPlateBurger-Blazor\\Restaurant\\HotPlateBurger\\appsettings.json",
+              "RelativeDocumentMoniker": "HotPlateBurger\\appsettings.json",
+              "ToolTip": "C:\\Users\\henry\\Desktop\\HotPlateBurger-Blazor\\Restaurant\\HotPlateBurger\\appsettings.json",
+              "RelativeToolTip": "HotPlateBurger\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-26T04:45:57.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "App.razor",
+              "DocumentMoniker": "C:\\Users\\henry\\Desktop\\HotPlateBurger-Blazor\\Restaurant\\HotPlateBurger\\App.razor",
+              "RelativeDocumentMoniker": "HotPlateBurger\\App.razor",
+              "ToolTip": "C:\\Users\\henry\\Desktop\\HotPlateBurger-Blazor\\Restaurant\\HotPlateBurger\\App.razor",
+              "RelativeToolTip": "HotPlateBurger\\App.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-26T04:46:38.631Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Create.razor",
               "DocumentMoniker": "C:\\Users\\henry\\Desktop\\HotPlateBurger-Blazor\\Restaurant\\HotPlateBurger\\Pages\\User\\Create.razor",
               "RelativeDocumentMoniker": "HotPlateBurger\\Pages\\User\\Create.razor",
