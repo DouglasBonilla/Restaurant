@@ -45,25 +45,25 @@
         }
     }
     public async Task ModificarCategoria()
-{
-    try
     {
-        var resultado = await http.PutAsJsonAsync("categoryTable/" + category.Id, category);
+        try
+        {
+            var resultado = await http.PutAsJsonAsync("categoryTable/" + category.Id, category);
 
-        if (resultado.IsSuccessStatusCode)
-        {
-            NavManager.NavigateTo("/category/index");
+            if (resultado.IsSuccessStatusCode)
+            {
+                NavManager.NavigateTo("/category/index");
+            }
+            else
+            {
+                error = $"Error al modificar la categoría. Código de estado: {resultado.StatusCode}";
+            }
         }
-        else
+        catch (Exception ex)
         {
-            error = $"Error al modificar la categoría. Código de estado: {resultado.StatusCode}";
+            error = $"Ocurrió un error: {ex.Message}";
         }
     }
-    catch (Exception ex)
-    {
-        error = $"Ocurrió un error: {ex.Message}";
-    }
-}
 
     void Index()
     {

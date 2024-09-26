@@ -1,5 +1,108 @@
-﻿<h3>Index</h3>
+﻿@page "/order/index"
+@inject HttpClient http
+@inject NavigationManager NavManager;
 
+<PageTitle>Index</PageTitle>
+
+<button id="idNuevo" class="btn btn-primary" @onclick="newOrder">Nueva Categoria</button>
+
+<h3>Buscar</h3>
+<div class="row">
+    <div class="col-sm-12">
+        <label class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="idBusNombre" @bind-value="orderbus.CustomerName" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <button class="btn btn-primary mt-3" @onclick="BuscarOrder">Buscar</button>
+    </div>
+</div>
+
+@if (orders == null)
+{
+    <p><em>Loading...</em></p>
+}
+else if (!orders.Any())
+{
+    <p>No orders found.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Cliente</th>
+                <th>Total</th>
+                <th>Fecha de orden</th>
+                <th>Dirreción</th>
+                <th>Email</th>
+                <th>Teléfono</th>
+                <th>Orden</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in orders)
+            {
+                <tr>
+                    <td>@order.CustomerName</td>
+                    <td>@order.Total</td>
+                    <td>@order.OrderTime</td>
+                    <td>@order.Address</td>
+                    <td>@order.Email</td>
+                    <td>@order.Phone</td>
+                    <td>@order.Orders</td>
+                    <td><button class="btn btn-success" @onclick="(() => goModify(order.Confirmation_ID))">Modificar</button></td>
+                    <td><button class="btn btn-info" @onclick="(() => goDetail(order.Confirmation_ID))">Detalle</button></td>
+                    <td><button class="btn btn-danger" @onclick="(() => goDelete(order.Confirmation_ID))">Eliminar</button></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
 @code {
+    private orderTable[]? orders;
+    private OrderDTO orderbus = new OrderDTO();
 
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            orders = await http.GetFromJsonAsync<orderTable[]>("orderTable");
+        }
+        catch (Exception ex)
+        {
+            throw new Exception(ex.Message);
+        }
+    }
+
+    private async void BuscarOrder()
+    {
+        var result = await http.PostAsJsonAsync("orderTable/Buscar", orderbus);
+        var content = await result.Content.ReadAsStringAsync();
+        orders = JsonSerializer.Deserialize<orderTable[]>(content,
+            new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+        StateHasChanged();
+    }
+
+    void newOrder()
+    {
+        NavManager.NavigateTo("/order/create");
+    }
+
+    void goModify(int pId)
+    {
+        NavManager.NavigateTo($"/order/edit/{pId}");
+    }
+
+    void goDetail(int pId)
+    {
+        NavManager.NavigateTo($"/order/detail/{pId}");
+    }
+
+    void goDelete(int pId)
+    {
+        NavManager.NavigateTo($"/order/delete/{pId}");
+    }
 }

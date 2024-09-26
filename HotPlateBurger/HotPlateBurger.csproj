@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <Reference Include="HotPlateRestaurant.EN">
-      <HintPath>..\..\..\Restaurant\Dll\HotPlateRestaurant.EN.dll</HintPath>
+      <HintPath>..\Dll\HotPlateRestaurant.EN.dll</HintPath>
     </Reference>
   </ItemGroup>
 
