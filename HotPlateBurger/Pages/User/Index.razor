@@ -1,5 +1,95 @@
-﻿<h3>Index</h3>
+﻿@page "/user/index"
+@using HotPlateRestaurant.EN;
+@using HotPlateBurger.Data
+@using System.Text.Json;
+@inject HttpClient http
+@inject NavigationManager NavManager;
+
+<PageTitle>Usuario</PageTitle>
+
+<button id="idNuevo" class="btn btn-primary mb-3" @onclick="newUsuario">Nuevo Usuario</button>
+<h3>Buscar</h3>
+
+<div class="row mb-3">
+    <div class="col-sm-12">
+        <label class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="idBusNombre" />
+    </div>
+</div>
+<div class="row mb-3">
+    <div class="col-sm-12">
+        <button class="btn btn-primary">Buscar</button>
+    </div>
+</div>
+
+@if (usuarios == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellio</th>
+                <th>Email</th>
+                <th>Telefono</th>
+                <th>Estatus</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in usuarios)
+            {
+                <tr>
+                    <td>@user.Name</td>
+                    <td>@user.LastName</td>
+                    <td>@user.Email</td>
+                    <td>@user.Phone</td>
+                    <td>@user.Status</td>
+                    <td> <button class="btn btn-success" @onclick="(() => goModify(user.Id))">Modificar</button></td>
+                    <td> <button class="btn btn-info" @onclick="(()=> goDetails(user.Id))">Detalle</button></td>
+                    <td> <button class="btn btn-danger" @onclick="(()=> goDelete(user.Id))">Eliminar</button></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
 
 @code {
+    private userTable[]? usuarios;
 
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            usuarios = await http.GetFromJsonAsync<userTable[]>("userTable");
+        }
+        catch (Exception ex)
+        {
+
+            throw new Exception(ex.Message);
+        }
+
+    }
+
+    void newUsuario()
+    {
+        NavManager.NavigateTo("/user/create");
+    }
+
+    void goModify(int pId)
+    {
+        NavManager.NavigateTo($"/user/edit/{pId}");
+    }
+
+    void goDetails(int pId)
+    {
+        NavManager.NavigateTo($"/user/detail/{pId}");
+    }
+
+    void goDelete(int pId)
+    {
+        NavManager.NavigateTo($"/user/delete/{pId}");
+    }
 }

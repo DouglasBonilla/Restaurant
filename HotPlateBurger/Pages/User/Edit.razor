@@ -1,5 +1,142 @@
-﻿<h3>Edit</h3>
+﻿@page "/user/edit/{pId:int}"
+@using HotPlateRestaurant.EN;
+@using HotPlateBurger.Data;
+@inject HttpClient Http;
+@inject NavigationManager NavManager
+
+<h3>Modificar Usuario</h3>
+
+<div class="row">
+	<div class="col-6">
+		<div class="row mb-3">
+			<div class="col-sm-12">
+				<input type="hidden" @bind-value="usuario.Id" />
+				<label class="form-label">Nombre</label>
+				<input type="text" class="form-control" id="idName" @bind-value="usuario.Name" />
+			</div>
+		</div>
+	</div>
+	<div class="col-6">
+		<div class="row mb-3">
+			<div class="col-sm-12">
+				<label class="form-label">Apellido</label>
+				<input type="text" class="form-control" id="idLastBame" @bind-value="usuario.LastName" />
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	@* <div class="col-6">
+	<div class="row mb-3">
+	<div class="col-sm-12">
+	<label class="form-label">Telefono</label>
+	<input type="number" class="form-control" id="idPhone" @bind-value="usuario.Phone" />
+	</div>
+	</div>
+	</div> *@
+	<div class="col-6">
+		<div class="row mb-3">
+			<div class="col-sm-12">
+				<label class="form-label">Email</label>
+				<input type="email" class="form-control" id="idEmail" @bind-value="usuario.Email" />
+			</div>
+		</div>
+	</div>
+</div>
+
+@* <div class="row">
+    <div class="col-6">
+        <div class="row mb-3">
+            <div class="col-sm-12">
+                <label class="form-label">Estatus</label>
+                <InputSelect id="status" class="form-select" @bind-Value="usuario.Status">
+                    @foreach (var item1 in estados)
+                    {
+                        <option value="@item1.Id">@item1.Nombre</option>
+                    }
+                </InputSelect>
+            </div>
+        </div>
+    </div>
+</div> *@
+
+<div class="row">
+	<div class="col-6">
+		<div class="row mb-3">
+			<div class="col-sm-12">
+				<button class="btn btn-primary" @onclick="EditUsuario">Modificar</button>
+				<button class="btn btn-secondary" @onclick="Index">Regresar</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<span style="color:red; font-weight:bold">@error</span>
+	</div>
+</div>
 
 @code {
+	userTable? usuario = new userTable();
+	List<Estado> estados = new List<Estado>();
+	public string error { get; set; } = string.Empty;
+	// string error = "";
 
+	[Parameter]
+	public int pId { get; set; }
+
+	protected override async Task OnInitializedAsync()
+	{
+		await Load();
+	}
+
+	private async Task Load()
+	{
+		try
+		{
+			if (pId != 0)
+			{
+				usuario = await Http.GetFromJsonAsync<userTable>("userTable/" + pId);
+				Estado estado = new Estado { Id = 0, Nombre = "      SELECCIONAR     " };
+				Estado estado1 = new Estado { Id = 1, Nombre = "ACTIVO" };
+				Estado estado2 = new Estado { Id = 2, Nombre = "INACTIVO" };
+
+				estados.Add(estado);
+				estados.Add(estado1);
+				estados.Add(estado2);
+			}
+		}
+		catch (Exception ex)
+		{
+			error = "Error: " + ex.Message;
+		}
+	}
+
+	public async Task EditUsuario()
+	{
+		try
+		{
+			var resultado = await Http.PutAsJsonAsync<userTable>("userTable" + usuario.Id, usuario);
+			if (Convert.ToInt32(resultado.StatusCode) == 200)
+			{
+				Index();
+			}
+			else
+			{
+				error = "Error al ingresar el Usuario";
+			}
+		}
+		catch (Exception ex)
+		{
+
+			error = $"Ocurrio un error: {ex.Message}";
+		}
+	}
+
+	void Index()
+	{
+		NavManager.NavigateTo("/user/index");
+	}
 }
