@@ -140,6 +140,9 @@
     <div class="search-bar">
         <label for="searchName">Nombre:</label>
         <input type="text" placeholder="Escriba para buscar" class="form-control" id="searchName" @bind="@userbus.Name" />
+
+        <label>Apellido:</label>
+        <input type="text" placeholder="Escriba para buscar" class="form-control" id="idBusApellido" @bind-value="@userbus.LastName" />
         <button class="btn-search" @onclick="BuscarUsuario">Buscar</button>
     </div>
 </div>
@@ -208,12 +211,11 @@ else
         }
     }
 
-    private async Task BuscarUsuario()
+    private async void BuscarUsuario()
     {
         try
         {
             var result = await http.PostAsJsonAsync("userTable/Buscar", userbus);
-            result.EnsureSuccessStatusCode(); 
             var content = await result.Content.ReadAsStringAsync();
             usuarios = JsonSerializer.Deserialize<userTable[]>(content,
                 new JsonSerializerOptions { PropertyNameCaseInsensitive = true });

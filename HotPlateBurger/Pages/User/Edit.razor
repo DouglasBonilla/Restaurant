@@ -60,7 +60,7 @@
             <div class="row mb-3">
                 <div class="col-sm-12">
                     <label class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="idName" @bind-value="usuario.Name" />
+                    <input type="text" class="form-control"  id="idName" @bind-value="usuario.Name" />
                 </div>
             </div>
         </div>
@@ -68,7 +68,7 @@
             <div class="row mb-3">
                 <div class="col-sm-12">
                     <label class="form-label">Apellido</label>
-                    <input type="text" class="form-control" id="idLastName" @bind-value="usuario.LastName" />
+                    <input type="text" class="form-control"  id="idLastName" @bind-value="usuario.LastName" />
                 </div>
             </div>
         </div>
@@ -78,8 +78,16 @@
         <div class="col-6">
             <div class="row mb-3">
                 <div class="col-sm-12">
+                    <label class="form-label">Teléfono</label>
+                    <input type="text" class="form-control"  id="idPhone" @bind-value="usuario.Phone" />
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="row mb-3">
+                <div class="col-sm-12">
                     <label class="form-label">Email</label>
-                    <input type="email" class="form-control" id="idEmail" @bind-value="usuario.Email" />
+                    <input type="email" class="form-control"  id="idEmail" @bind-value="usuario.Email" />
                 </div>
             </div>
         </div>
