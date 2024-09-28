@@ -1,0 +1,33 @@
+﻿@page "/food/cart"
+@inject NavigationManager NavManager
+
+<PageTitle>Cart</PageTitle>
+
+<h3>Your Cart</h3>
+
+@if (cartItems == null || cartItems.Count == 0)
+{
+    <p>Your cart is empty.</p>
+}
+else
+{
+    <ul>
+        @foreach (var item in cartItems)
+        {
+            <li>@item.Title - $@item.Price</li>
+        }
+    </ul>
+    <p>Total: @cartItems.Sum(item => Convert.ToDecimal(item.Price))</p>
+}
+
+<button @onclick="GoBack">Back to Menu</button>
+
+@code {
+    [Parameter]
+    public List<foodTable> cartItems { get; set; } = new List<foodTable>();
+
+    private void GoBack()
+    {
+        NavManager.NavigateTo("/food/menu");
+    }
+}
