@@ -3,68 +3,109 @@
 @using HotPlateBurger.Data;
 @inject HttpClient Http;
 @inject NavigationManager NavManager
+<head>
+    <style>
+        .container {
+            background-color: #F8F3CC;
+            border: solid 1px #808080;
+            padding-top: 40px;
+            padding-bottom: 20px;
+            border-radius: 8px;
+        }
 
-<h3>Detalle</h3>
+        .btn-save {
+            background-color: #f7a734;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+            font-weight: bold;
+        }
 
-<div class="row">
-    <div class="col-6">
-        <div class="row mb-3">
-            <div class="col-sm-12">
-                <input type="hidden" @bind-value="usuario.Id" />
-                <label class="form-label">Nombre</label>
-                <input type="text" class="form-control" readonly id="idName" @bind-value="usuario.Name" />
+        .btn-cancel {
+            background-color: transparent;
+            color: black;
+            border: 2px solid black;
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+            .btn-save:hover, .btn-cancel:hover {
+                opacity: 0.8;
+            }
+
+        .button-container {
+            text-align: right;
+            margin-top: 30px;
+            padding-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #2C2C2C;
+        }
+    </style>
+</head>
+<h3>Detalle de Usuario</h3>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <div class="row mb-3">
+                <div class="col-sm-12">
+                    <label class="form-label">Nombre</label>
+                    <input type="text" class="form-control" readonly id="idName" @bind-value="usuario.Name" />
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="row mb-3">
+                <div class="col-sm-12">
+                    <label class="form-label">Apellido</label>
+                    <input type="text" class="form-control" readonly id="idLastName" @bind-value="usuario.LastName" />
+                </div>
             </div>
         </div>
     </div>
-    <div class="col-6">
-        <div class="row mb-3">
-            <div class="col-sm-12">
-                <label class="form-label">Apellido</label>
-                <input type="text" class="form-control" id="idLastBame" readonly @bind-value="usuario.LastName" />
+
+    <div class="row">
+        <div class="col-6">
+            <div class="row mb-3">
+                <div class="col-sm-12">
+                    <label class="form-label">Teléfono</label>
+                    <input type="text" class="form-control" readonly id="idPhone" @bind-value="usuario.Phone" />
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="row mb-3">
+                <div class="col-sm-12">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" readonly id="idEmail" @bind-value="usuario.Email" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <div class="row mb-3">
+                <div class="col-sm-12">
+                    <label class="form-label">Estatus</label>
+                    <input type="text" class="form-control" readonly id="IdStatus" @bind-value="estado" />
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="row">
-    <div class="col-6">
-        <div class="row mb-3">
-            <div class="col-sm-12">
-                <label class="form-label">Telefono</label>
-                <input type="number" class="form-control" id="idPhone" readonly @bind-value="usuario.Phone" />
-            </div>
-        </div>
-    </div>
-    <div class="col-6">
-        <div class="row mb-3">
-            <div class="col-sm-12">
-                <label class="form-label">Email</label>
-                <input type="email" class="form-control" id="idEmail" readonly @bind-value="usuario.Email" />
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-6">
-        <div class="row mb-3">
-            <div class="col-sm-12">
-                <label class="form-label">Estatus</label>
-                <input type="text" class="form-control" id="IdStatus" readonly @bind-value="estado" />
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-6">
-        <div class="row mb-3">
-            <div class="col-sm-12">
-                <button class="btn btn-primary" @onclick="EditUsuario">Modificar</button>
-                <button class="btn btn-secondary" @onclick="Index">Regresar</button>
-            </div>
-        </div>
-    </div>
+<div class="button-container">
+    <button class="btn btn-cancel" @onclick="Index">Regresar</button>
+    <button class="btn btn-save" @onclick="EditUsuario">Modificar</button>
 </div>
 
 <div class="row">
@@ -75,7 +116,6 @@
 
 @code {
     userTable? usuario = new userTable();
-    List<Estado> estados = new List<Estado>();
     string estado = "";
     string error = "";
 
@@ -94,30 +134,18 @@
             if (pId != 0)
             {
                 usuario = await Http.GetFromJsonAsync<userTable>("userTable/" + pId);
-                if (usuario.Status == 1)
-                    estado = "ACTIVO";
-                else
-                    estado = "INACTIVO";
+                estado = usuario.Status == 1 ? "ACTIVO" : "INACTIVO";
             }
         }
         catch (Exception ex)
         {
-            error = "Error al cargar los roles: " + ex.Message;
+            error = "Error al cargar los datos: " + ex.Message;
         }
     }
 
-    public async Task EditUsuario()
+    public void EditUsuario()
     {
-        try
-        {
-            NavManager.NavigateTo("/user/edit/" + usuario.Id);
-
-        }
-        catch (Exception ex)
-        {
-
-            throw new Exception(ex.Message.ToString());
-        }
+        NavManager.NavigateTo("/user/edit/" + usuario.Id);
     }
 
     void Index()

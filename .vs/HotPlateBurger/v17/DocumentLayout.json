@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Victo\\Desktop\\Restaurant\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\victo\\desktop\\restaurant\\hotplateburger\\pages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\pages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\victo\\desktop\\restaurant\\hotplateburger\\pages\\user\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\pages\\user\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\victo\\desktop\\restaurant\\hotplateburger\\pages\\category\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\pages\\category\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,28 +30,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.razor",
-              "DocumentMoniker": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\Pages\\User\\Index.razor",
-              "RelativeDocumentMoniker": "HotPlateBurger\\Pages\\User\\Index.razor",
-              "ToolTip": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\Pages\\User\\Index.razor",
-              "RelativeToolTip": "HotPlateBurger\\Pages\\User\\Index.razor",
-              "ViewState": "AgIAAK0AAAAAAAAAAAAIwLwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-27T13:33:41.791Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.razor",
-              "DocumentMoniker": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\Pages\\Index.razor",
-              "RelativeDocumentMoniker": "HotPlateBurger\\Pages\\Index.razor",
-              "ToolTip": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\Pages\\Index.razor",
-              "RelativeToolTip": "HotPlateBurger\\Pages\\Index.razor",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAIwEkAAAAaAAAAAAAAAA==",
+              "Title": "Create.razor",
+              "DocumentMoniker": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\Pages\\Category\\Create.razor",
+              "RelativeDocumentMoniker": "HotPlateBurger\\Pages\\Category\\Create.razor",
+              "ToolTip": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\Pages\\Category\\Create.razor",
+              "RelativeToolTip": "HotPlateBurger\\Pages\\Category\\Create.razor",
+              "ViewState": "AgIAADsAAAAAAAAAAAAqwD8AAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-27T13:33:03.316Z",
+              "WhenOpened": "2024-09-28T01:04:52.497Z",
               "EditorCaption": ""
             }
           ]

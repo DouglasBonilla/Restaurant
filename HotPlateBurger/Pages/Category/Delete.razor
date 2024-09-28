@@ -1,23 +1,71 @@
 ﻿@page "/category/delete/{pId:int}"
 @inject HttpClient http
 @inject NavigationManager NavManager;
+<head>
+    <style>
+        .container {
+            background-color: #F8F3CC;
+            border: solid 1px #808080;
+            padding-top: 40px;
+            padding-bottom: 20px;
+            border-radius: 8px;
+        }
 
+        .btn-delete {
+            background-color: #FF522C;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+            font-weight: bold;
+        }
+
+        .btn-cancel {
+            background-color: transparent;
+            color: black;
+            border: 2px solid black;
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+            .btn-save:hover, .btn-cancel:hover {
+                opacity: 0.8;
+            }
+
+        .button-container {
+            text-align: right;
+            margin-top: 30px;
+            padding-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #2C2C2C;
+        }
+    </style>
+</head>
 <h3>Delete Rol</h3>
 
 <input type="hidden" id="idRol" @bind-value="category.Id" />
-<div class="row">
-    <div class="col-sm-12">
-        <label class="form-label">Nombre</label>
-        <input type="text" class="form-control" id="idNombre" @bind-value="category.Name" disabled />
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <label class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="idNombre" @bind-value="category.Name" disabled />
+        </div>
     </div>
 </div>
 
-<div class="row">
-    <div class="col-sm-12 m-3">
-        <button class="btn btn-danger" @onclick="deleteCategory">Eliminar</button>
-        <button class="btn btn-secondary" @onclick="Index">Regresar</button>
-    </div>
+<div class="button-container">
+    <button class="btn btn-cancel" @onclick="Index">Regresar</button>
+    <button class="btn btn-delete" @onclick="deleteCategory">Eliminar</button>
 </div>
+
 
 <div class="row">
     <div class="col-sm-12">
@@ -62,18 +110,15 @@
             var resultado = await http.DeleteAsync("categoryTable/" + category.Id);
             if (resultado.IsSuccessStatusCode)
             {
-                // Call Index or refresh the page after successful deletion
                 Index();
             }
             else
             {
-                // Update error message to indicate deletion instead of modification
                 error = "Error al eliminar el registro de categoria";
             }
         }
         catch (Exception ex)
         {
-            // Handle exceptions and display the error message
             error = $"Error al eliminar la categoria: {ex.Message}";
         }
     }

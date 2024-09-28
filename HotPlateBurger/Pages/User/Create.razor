@@ -3,91 +3,137 @@
 @using HotPlateBurger.Data;
 @inject HttpClient Http;
 @inject NavigationManager NavManager
+<head>
+    <style>
+        .container {
+            background-color: #F8F3CC;
+            border: solid 1px #808080;
+            padding-top: 40px;
+            padding-bottom: 20px;
+            border-radius: 8px;
+        }
 
-<h3>Registrar</h3>
+        .btn-save {
+            background-color: #f7a734;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+            font-weight: bold;
+        }
 
-<div class="row">
-    <div class="col-6">
-        <div class="row mb-3">
-            <div class="col-sm-12">
-                <label class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="idName" @bind-value="usuario.Name" />
+        .btn-cancel {
+            background-color: transparent;
+            color: black;
+            border: 2px solid black;
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+            .btn-save:hover, .btn-cancel:hover {
+                opacity: 0.8;
+            }
+
+        .button-container {
+            text-align: right;
+            margin-top: 30px;
+            padding-bottom: 20px;
+        }
+
+        .ml {
+            margin-right: 0px;
+        }
+
+        h3 {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #2C2C2C;
+        }
+    </style>
+</head>
+<h3>Registrar Usuario</h3>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <div class="row mb-3">
+                <div class="col-sm-12">
+                    <label class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="idName" @bind-value="usuario.Name" placeholder="Introduce tu nombre" />
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="row mb-3">
+                <div class="col-sm-12">
+                    <label class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="idLastName" @bind-value="usuario.LastName" placeholder="Introduce tu apellido" />
+                </div>
             </div>
         </div>
     </div>
-    <div class="col-6">
-        <div class="row mb-3">
-            <div class="col-sm-12">
-                <label class="form-label">Apellido</label>
-                <input type="text" class="form-control" id="idLastBame" @bind-value="usuario.LastName" />
+
+    <div class="row">
+        <div class="col-6">
+            <div class="row mb-3">
+                <div class="col-sm-12">
+                    <label class="form-label">Telefono</label>
+                    <input type="number" class="form-control" id="idPhone" @bind-value="usuario.Phone" placeholder="Introduce tu teléfono" />
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="row mb-3">
+                <div class="col-sm-12">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" id="idEmail" @bind-value="usuario.Email" placeholder="Introduce tu email" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <div class="row mb-3">
+                <div class="col-sm-12">
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-control" id="idPassword" @bind-value="usuario.Password" placeholder="Introduce tu contraseña" />
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="row mb-3">
+                <div class="col-sm-12">
+                    <label class="form-label">Confirmar Password</label>
+                    <input type="password" class="form-control" id="idConfirmPassword" @bind-value="usuario.ConfirmPassword_aux" placeholder="Confirma tu contraseña" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <div class="row mb-3">
+                <div class="col-sm-12">
+                    <label class="form-label">Estatus</label>
+                    <InputSelect id="roles" class="form-select" @bind-Value="usuario.Status">
+                        @foreach (var item1 in estados)
+                        {
+                            <option value="@item1.Id">@item1.Nombre</option>
+                        }
+                    </InputSelect>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="row">
-    <div class="col-6">
-        <div class="row mb-3">
-            <div class="col-sm-12">
-                <label class="form-label">Telefono</label>
-                <input type="number" class="form-control" id="idPhone" @bind-value="usuario.Phone" />
-            </div>
-        </div>
-    </div>
-    <div class="col-6">
-        <div class="row mb-3">
-            <div class="col-sm-12">
-                <label class="form-label">Email</label>
-                <input type="email" class="form-control" id="idEmail" @bind-value="usuario.Email" />
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-6">
-        <div class="row mb-3">
-            <div class="col-sm-12">
-                <label class="form-label">Password</label>
-                <input type="password" class="form-control" id="idPassword" @bind-value="usuario.Password" />
-            </div>
-        </div>
-    </div>
-    <div class="col-6">
-        <div class="row mb-3">
-            <div class="col-sm-12">
-                <label class="form-label">Comfirmar Password</label>
-                <input type="password" class="form-control" id="idComfirmarPassword" @bind-value="usuario.ConfirmPassword_aux" />
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-6">
-        <div class="row mb-3">
-            <div class="col-sm-12">
-                <label class="form-label">Estatus</label>
-                <InputSelect id="roles" class="form-select" @bind-Value="usuario.Status">
-                    @foreach (var item1 in estados)
-                    {
-                        <option value="@item1.Id">@item1.Nombre</option>
-                    }
-                </InputSelect>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-6">
-        <div class="row mb-3">
-            <div class="col-sm-12">
-                <button class="btn btn-primary" @onclick="CreateUsuario">Guardar</button>
-                <button class="btn btn-secondary" @onclick="Index">Regresar</button>
-            </div>
-        </div>
-    </div>
+<div class="button-container">
+    <button class="btn btn-cancel" @onclick="Index">Cancelar</button>
+    <button class="btn btn-save" @onclick="CreateUsuario">Guardar</button>
 </div>
 
 <div class="row">
@@ -130,7 +176,7 @@
         {
             if (usuario.Password != usuario.ConfirmPassword_aux)
             {
-                error = "Password deben ser iguales";
+                error = "Las contraseñas deben coincidir";
             }
             else
             {
@@ -147,7 +193,6 @@
         }
         catch (Exception ex)
         {
-
             throw new Exception(ex.Message.ToString());
         }
     }

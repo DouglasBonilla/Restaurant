@@ -1,22 +1,69 @@
 ﻿@page "/category/detail/{pId:int}"
 @inject HttpClient http
 @inject NavigationManager NavManager;
+<head>
+    <style>
+        .container {
+            background-color: #F8F3CC;
+            border: solid 1px #808080;
+            padding-top: 40px;
+            padding-bottom: 20px;
+            border-radius: 8px;
+        }
 
+        .btn-save {
+            background-color: #f7a734;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+            font-weight: bold;
+        }
+
+        .btn-cancel {
+            background-color: transparent;
+            color: black;
+            border: 2px solid black;
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+            .btn-save:hover, .btn-cancel:hover {
+                opacity: 0.8;
+            }
+
+        .button-container {
+            text-align: right;
+            margin-top: 30px;
+            padding-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #2C2C2C;
+        }
+    </style>
+</head>
 <h3>Detalles de Rol</h3>
 
 <input type="hidden" id="idCategory" @bind-value="category.Id" />
-<div class="row">
-    <div class="col-sm-12">
-        <label class="form-label">Nombre</label>
-        <input type="text" class="form-control" id="idNombre" @bind-value="category.Name" />
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <label class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="idNombre" @bind-value="category.Name" />
+        </div>
     </div>
 </div>
 
-<div class="row">
-    <div class="col-sm-12 m-3">
-        <button class="btn btn-primary" @onclick="EnviarModificarCategoria">Enviar a modificar</button>
-        <button class="btn btn-secondary" @onclick="Index">Regresar</button>
-    </div>
+<div class="button-container">
+    <button class="btn btn-cancel" @onclick="Index">Regresar</button>
+    <button class="btn btn-save" @onclick="EnviarModificarCategoria">Enviar a modificar</button>
 </div>
 
 <div class="row">
