@@ -134,60 +134,58 @@
 </head>
 
 
-    <div class="header">
-        <h3>Categoría</h3>
-        <button id="idNuevo" class="btn-add" @onclick="newCategory">+ Agregar</button>
-    </div>
-    <div class="container">
+<div class="header">
+    <h3>Categoría</h3>
+    <button id="idNuevo" class="btn-add" @onclick="newCategory">+ Agregar</button>
+</div>
+<div class="container">
     <div class="search-bar">
         <label>Nombre:</label>
         <input type="text" placeholder="Escriba para buscar" class="form-control" id="idBusNombre" @bind-value="categorybus.Name" />
         <button class="btn-search" @onclick="BuscarCategoria">Buscar</button>
     </div>
-    </div>
-    
+</div>
 
-    @if (categories == null)
-    {
-        <p><em>Loading...</em></p>
-    }
-    else if (!categories.Any())
-    {
-        <p>No categories found.</p>
-    }
-    else
-    {
-        <table class="table">
-            <thead>
+
+@if (categories == null)
+{
+    <p><em>Loading...</em></p>
+}
+else if (!categories.Any())
+{
+    <p>No categories found.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var category in categories)
+            {
                 <tr>
-                    <th>ID</th>
-                    <th>Nombre</th>
-                    <th>Acciones</th>
+                    <td>@category.Name</td>
+                    <td>
+                        <button class="btn btn-edit" @onclick="(() => goModify(category.Id))">
+                            <i class="fas fa-pencil-alt"></i>
+                        </button>
+                        <button class="btn btn-view" @onclick="(() => goDetail(category.Id))">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="btn btn-delete" @onclick="(() => goDelete(category.Id))">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </td>
+
                 </tr>
-            </thead>
-            <tbody>
-                @foreach (var category in categories)
-                {
-                    <tr>
-                        <td>@category.Id</td>
-                        <td>@category.Name</td>
-                           <td>
-                            <button class="btn btn-edit" @onclick="(() => goModify(category.Id))">
-                                <i class="fas fa-pencil-alt"></i>
-                            </button>
-                            <button class="btn btn-view" @onclick="(() => goDetail(category.Id))">
-                                <i class="fas fa-eye"></i>
-                            </button>
-                            <button class="btn btn-delete" @onclick="(() => goDelete(category.Id))">
-                                <i class="fas fa-trash-alt"></i>
-                            </button>
-                        </td>
-                         
-                    </tr>
-                }
-            </tbody>
-        </table>
-    }
+            }
+        </tbody>
+    </table>
+}
 
 
 @code {
