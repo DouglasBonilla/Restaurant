@@ -5,6 +5,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\victo\\desktop\\restaurant\\hotplateburger\\pages\\food\\menu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\pages\\food\\menu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\victo\\desktop\\restaurant\\hotplateburger\\pages\\category\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\pages\\category\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\victo\\desktop\\restaurant\\hotplateburger\\pages\\user\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\pages\\user\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,15 +38,41 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.razor",
+              "DocumentMoniker": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\Pages\\User\\Index.razor",
+              "RelativeDocumentMoniker": "HotPlateBurger\\Pages\\User\\Index.razor",
+              "ToolTip": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\Pages\\User\\Index.razor",
+              "RelativeToolTip": "HotPlateBurger\\Pages\\User\\Index.razor",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-29T02:59:22.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Menu.razor",
               "DocumentMoniker": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\Pages\\Food\\Menu.razor",
               "RelativeDocumentMoniker": "HotPlateBurger\\Pages\\Food\\Menu.razor",
-              "ToolTip": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\Pages\\Food\\Menu.razor*",
-              "RelativeToolTip": "HotPlateBurger\\Pages\\Food\\Menu.razor*",
-              "ViewState": "AgIAAPgAAAAAAAAAAAAwwA0BAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\Pages\\Food\\Menu.razor",
+              "RelativeToolTip": "HotPlateBurger\\Pages\\Food\\Menu.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKgBAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-28T15:41:02.299Z",
+              "WhenOpened": "2024-09-29T02:55:56.444Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Create.razor",
+              "DocumentMoniker": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\Pages\\Category\\Create.razor",
+              "RelativeDocumentMoniker": "HotPlateBurger\\Pages\\Category\\Create.razor",
+              "ToolTip": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\Pages\\Category\\Create.razor",
+              "RelativeToolTip": "HotPlateBurger\\Pages\\Category\\Create.razor",
+              "ViewState": "AgIAADUAAAAAAAAAAAAAADwAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-29T02:54:35.947Z",
               "EditorCaption": ""
             }
           ]
