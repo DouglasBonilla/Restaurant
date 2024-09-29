@@ -1,5 +1,251 @@
-﻿<h3>Create</h3>
+﻿@page "/food/create"
+@inject HttpClient http
+@inject NavigationManager NavManager;
+@using Microsoft.AspNetCore.Components.Forms
+@using System.IO
+<head>
+    <style>
+        .container {
+            background-color: #F8F3CC;
+            border: solid 1px #808080;
+            padding-top: 40px;
+            padding-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .btn-save {
+            background-color: #f7a734;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+            font-weight: bold;
+        }
+
+        .btn-cancel {
+            background-color: transparent;
+            color: black;
+            border: 2px solid black;
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+            .btn-save:hover, .btn-cancel:hover {
+                opacity: 0.8;
+            }
+
+        .button-container {
+            text-align: right;
+            margin-top: 30px;
+            padding-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #2C2C2C;
+        }
+    </style>
+</head>
+<h3>Registrar Comida</h3>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <label class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="idTitle" @bind-value="food.Title" />
+        </div>
+    </div>
+    @* <div class="row">
+        <div class="col-sm-12">
+            <label class="form-label" style="visibility: hidden;">Picture</label>
+            <input type="text" class="form-control" id="idPicture" @bind-value="food.Picture" style="visibility: hidden;" />
+        </div>
+    </div> *@
+    <div class="row">
+        <div class="col-sm-12">
+            <label class="form-label">Precio</label>
+            <input type="number" class="form-control" id="idPrice" @bind-value="food.Price" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <label class="form-label">Categoria</label>
+            <InputSelect id="categories" class="form-select" @bind-Value="food.CategoryId">
+                @foreach (var item in categories)
+                {
+                    @if (categories.Count == 0)
+                    {
+                        <option disabled>Cargando categorias...</option>
+                    }
+                    else
+                    {
+                        <option value="">Seleccione un categoria</option>
+                        @foreach (var category in categories)
+                        {
+                            <option value="@category.Id">@category.Name</option>
+                        }
+                    }
+                }
+            </InputSelect>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <label class="form-label">Seleccionar imagen</label>
+            <InputFile OnChange="HandleFileSelected" />
+            <span class="text-danger">@error</span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <label class="form-label">Titulo</label>
+            <input type="text" class="form-control" id="idPrice" @bind-value="foodImages.Title" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <label class="form-label">Descripción</label>
+            <input type="text" class="form-control" id="idPrice" @bind-value="foodImages.AltText" />
+        </div>
+    </div>
+    <div class="button-container">
+        <button class="btn btn-cancel" @onclick="Index">Cancelar</button>
+        <button class="btn btn-save" @onclick="CreateFood">Guardar</button>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <span style="color: red; font-weight: bold">@error</span>
+        </div>
+    </div>
+</div>
 
 @code {
+    foodTable food = new foodTable();
+    FoodImages foodImages = new FoodImages();
+    List<categoryTable> categories = new List<categoryTable>();
 
+    private string error = string.Empty;
+    private byte[] imageData;
+    private bool isImageSelected = false;
+    private IBrowserFile selectedFile;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            categories = await http.GetFromJsonAsync<List<categoryTable>>("categoryTable");
+        }
+        catch (Exception ex)
+        {
+            error = $"Error fetching categories: {ex.Message}";
+        }
+    }
+
+    private async Task HandleFileSelected(InputFileChangeEventArgs e)
+    {
+        if (e.FileCount == 0)
+        {
+            error = "No se ha seleccionado ningún archivo.";
+            return;
+        }
+
+        var file = e.GetMultipleFiles(1).FirstOrDefault();  // Obtener el archivo seleccionado
+        if (file == null)
+        {
+            error = "No se ha seleccionado ningún archivo.";
+            return;
+        }
+
+        selectedFile = file;  // Asignar el archivo a selectedFile
+
+        try
+        {
+            var buffer = new byte[file.Size];  // Usar file en lugar de selectedFile
+            await file.OpenReadStream().ReadAsync(buffer);  // Leer el archivo seleccionado
+            imageData = buffer;  // Almacenar los datos de la imagen en imageData
+            isImageSelected = true;
+        }
+        catch (Exception ex)
+        {
+            error = $"Error al procesar el archivo: {ex.Message}";
+        }
+    }
+
+
+
+    public async Task CreateFood()
+    {
+        try
+        {
+            // Crear el objeto foodTable
+            var foodTable = new foodTable
+                {
+                    Title = food.Title,
+                    CategoryId = food.CategoryId,
+                    Price = food.Price,
+                    Picture = "" // Asegúrate de manejar correctamente esta propiedad si es necesaria
+                };
+
+            // Crear el objeto foodImages
+            var imagefood = new FoodImages
+                {
+                    Title = foodImages.Title,
+                    AltText = foodImages.AltText
+                };
+
+            // Crear la solicitud multipart/form-data
+            var content = new MultipartFormDataContent();
+
+            // Añadir la imagen como archivo
+            if (selectedFile != null && imageData != null)
+            {
+                var imageContent = new ByteArrayContent(imageData);
+                imageContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue(selectedFile.ContentType);
+                content.Add(imageContent, "file", selectedFile.Name);
+            }
+            else
+            {
+                error = "El archivo de imagen es requerido.";
+                return; // Salir si no hay imagen seleccionada
+            }
+
+            // Serializar y añadir foodTable como JSON
+            var jsonFoodTable = JsonSerializer.Serialize(foodTable);
+            content.Add(new StringContent(jsonFoodTable, System.Text.Encoding.UTF8, "application/json"), "pFoodTable");
+
+            // Serializar y añadir foodImages como JSON
+            var jsonFoodImages = JsonSerializer.Serialize(imagefood);
+            content.Add(new StringContent(jsonFoodImages, System.Text.Encoding.UTF8, "application/json"), "pDataImages");
+
+            // Realizar la solicitud POST
+            var resultado = await http.PostAsync("foodTable", content);
+
+            if (resultado.IsSuccessStatusCode)
+            {
+                Index();
+            }
+            else
+            {
+                var errorMessage = await resultado.Content.ReadAsStringAsync();
+                error = $"Error: {errorMessage}";
+            }
+        }
+        catch (Exception ex)
+        {
+            error = $"Error: {ex.Message}";
+        }
+    }
+
+
+
+    void Index()
+    {
+        NavManager.NavigateTo("/food/index");
+    }
 }

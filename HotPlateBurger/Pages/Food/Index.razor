@@ -2,6 +2,270 @@
 @inject HttpClient http
 @inject NavigationManager NavManager;
 
-<PageTitle>Index</PageTitle>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .container {
+            background-color: #F8F3CC;
+            border: solid 1px #808080;
+            padding: 40px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
 
-<h3>Index</h3>
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .btn-add {
+            background-color: #F39C12;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            border: none;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .btn-add:hover {
+            background-color: #E67E22;
+            color: white;
+        }
+
+        h3 {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #2C2C2C;
+        }
+
+        .btn-search {
+            background-color: #2F2F2F;
+            color: white;
+            border: none;
+            padding: 9px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn-search:hover {
+            background-color: #000;
+        }
+
+        /* Responsive table */
+        .table-responsive {
+            width: 100%;
+            max-height: 600px; /* Ajusta este valor para hacerla menos alta */
+            overflow-x: auto;
+            overflow-y: auto;
+            margin-top: 20px;
+            border: 1px solid #ddd;
+        }
+
+        /* Table structure */
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+            /* Table header and content styles */
+            .table th, .table td {
+                padding: 10px;
+                text-align: left;
+                white-space: nowrap;
+            }
+
+            .table th {
+                background-color: #2C2C2C;
+                color: white;
+            }
+
+            .table tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+
+        /* Button styles */
+        .btn {
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 5px;
+            font-size: 16px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            cursor: pointer;
+            margin-right: 40px;
+            box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+            .btn i {
+                font-size: 1.2em;
+            }
+
+        /* Specific button color styles */
+        .btn-edit {
+            background-color: #2C2C2C;
+        }
+
+        .btn-view {
+            background-color: #F39C12;
+        }
+
+        .btn-delete {
+            background-color: #DC3545;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Search bar styles */
+        .search-bar {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+            .search-bar label {
+                margin-right: 10px;
+                font-weight: bold;
+            }
+
+            .search-bar input {
+                flex-grow: 1;
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                min-width: 200px;
+                margin-right: 10px; /* Espacio entre input y botón */
+            }
+
+        .btn-search {
+            background-color: #2F2F2F;
+            color: white;
+            border: none;
+            padding: 9px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 0; /* Eliminar márgenes laterales */
+        }
+
+            .btn-search:hover {
+                background-color: #000;
+            }
+
+    </style>
+</head>
+
+<div class="header">
+    <h3>Comida</h3>
+    <button id="idNuevo" class="btn-add" @onclick="newFood">+ Agregar</button>
+</div>
+<div class="container">
+    <div class="search-bar">
+        <label>Nombre:</label>
+        <input type="text" placeholder="Escriba para buscar" class="form-control" id="idBusNombre" @bind-value="foodbus.Title" />
+        <button class="btn-search" @onclick="BuscarFood">Buscar</button>
+    </div>
+
+</div>
+<div class="table-responsive">
+    @if (foods == null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else if (!foods.Any())
+    {
+        <p>No categories found.</p>
+    }
+    else
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Imagen</th>
+                    <th>Categoria</th>
+                    <th>Titulo</th>
+                    <th>Precio</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var food in foods)
+                {
+                    <tr>
+                        <td>@food.Picture</td>
+                        <td>@food.CategoryId</td>
+                        <td>@food.Title</td>
+                        <td>@food.Price</td>
+                        <td>
+                            <button class="btn btn-edit" @onclick="(() => goModify(food.Id))">
+                                <i class="fas fa-pencil-alt"></i>
+                            </button>
+                            <button class="btn btn-view" @onclick="(() => goDetail(food.Id))">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="btn btn-delete" @onclick="(() => goDelete(food.Id))">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>
+
+@code {
+    private foodTable[]? foods;
+    private FoodDTO foodbus = new FoodDTO();
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            foods = await http.GetFromJsonAsync<foodTable[]>("foodTable");
+        }
+        catch (Exception ex)
+        {
+            throw new Exception(ex.Message);
+        }
+    }
+
+    private async void BuscarFood()
+    {
+        var result = await http.PostAsJsonAsync("foodTable/Buscar", foods);
+        var content = await result.Content.ReadAsStringAsync();
+        foods = JsonSerializer.Deserialize<foodTable[]>(content,
+            new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+        StateHasChanged();
+    }
+
+    void newFood()
+    {
+        NavManager.NavigateTo("/food/create");
+    }
+
+    void goModify(int pId)
+    {
+        NavManager.NavigateTo($"/food/edit/{pId}");
+    }
+
+    void goDetail(int pId)
+    {
+        NavManager.NavigateTo($"/food/detail/{pId}");
+    }
+
+    void goDelete(int pId)
+    {
+        NavManager.NavigateTo($"/food/delete/{pId}");
+    }
+}
