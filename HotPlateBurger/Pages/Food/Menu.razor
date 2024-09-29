@@ -215,6 +215,31 @@
 </head>
 
 <div class="category-container">
+    <div class="category" @onclick="GetAllProducts">
+        <img src="images/call-bell.png" alt="All Categories" />
+        <span>All</span>
+    </div>
+    @if(categories == null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else
+    {
+        @foreach (var category in categories)
+        {
+            <div class="category" @onclick="() => FilterByCategory(category.Id)">
+                <img src="@category.Icon" alt="@category.Name" />
+                <span>@category.Name</span>
+            </div>
+        }
+    }
+    <div class="category" @onclick="ShowCartModal">
+        <img src="images/shopping-cart.png" alt="Cart" />
+        <span>Ver carrito</span>
+    </div>
+</div>
+
+@* <div class="category-container">
     <div class="category">
         <img src="images/call-bell.png" alt="All Categories" />
         <span>All</span>
@@ -243,7 +268,7 @@
         <img src="images/shopping-cart.png" alt="Cart" />
         <span>Ver carrito</span>
     </div>
-</div>
+</div> *@
 
 @if (foods == null)
 {
@@ -320,6 +345,7 @@ else
 
 @code {
     private string error = string.Empty;
+    private categoryTable[]? categories;
     private foodTable[]? foods;
     private List<foodTable> cart = new List<foodTable>();
     private bool isCartModalVisible = false;
@@ -341,12 +367,23 @@ else
     {
         try
         {
+            categories = await http.GetFromJsonAsync<categoryTable[]>("categoryTable");
             foods = await http.GetFromJsonAsync<foodTable[]>("foodTable");
         }
         catch (Exception ex)
         {
             Console.WriteLine($"Error loading food: {ex.Message}");
         }
+    }
+
+    private async Task GetAllProducts()
+    {
+        foods = await http.GetFromJsonAsync<foodTable[]>("foodTable");
+    }
+
+    private async Task FilterByCategory(int categoryId)
+    {
+        foods = await http.GetFromJsonAsync<foodTable[]>($"foodTable/GetByCategory/{categoryId}");
     }
 
     private void AddToCart(foodTable food)
