@@ -56,23 +56,23 @@
                 background-color: #000;
             }
 
-        /* Responsive table */
+        
         .table-responsive {
             width: 100%;
-            max-height: 600px; /* Ajusta este valor para hacerla menos alta */
+            max-height: 600px; 
             overflow-x: auto;
             overflow-y: auto;
             margin-top: 20px;
             border: 1px solid #ddd;
         }
 
-        /* Table structure */
+        
         .table {
             width: 100%;
             border-collapse: collapse;
         }
 
-            /* Table header and content styles */
+            
             .table th, .table td {
                 padding: 10px;
                 text-align: left;
@@ -88,8 +88,7 @@
                 background-color: #f9f9f9;
             }
 
-        /* Button styles */
-        .btn {
+          .btn {
             padding: 8px;
             border: none;
             border-radius: 5px;
@@ -102,31 +101,17 @@
             cursor: pointer;
             margin-right: 40px;
             box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease;
         }
 
-            .btn i {
-                font-size: 1.2em;
-            }
+        .btn i {
+            font-size: 1.2em;
+            color: white;
+        }
 
-        /* Specific button color styles */
         .btn-edit {
             background-color: #2C2C2C;
         }
 
-        .btn-view {
-            background-color: #F39C12;
-        }
-
-        .btn-delete {
-            background-color: #DC3545;
-        }
-
-        .btn:hover {
-            opacity: 0.9;
-        }
-
-        /* Search bar styles */
         .search-bar {
             display: flex;
             align-items: center;
@@ -144,7 +129,7 @@
                 border: 1px solid #ccc;
                 border-radius: 5px;
                 min-width: 200px;
-                margin-right: 10px; /* Espacio entre input y botón */
+                margin-right: 10px; 
             }
 
         .btn-search {
@@ -155,7 +140,7 @@
             cursor: pointer;
             border-radius: 5px;
             font-weight: bold;
-            margin: 0; /* Eliminar márgenes laterales */
+            margin: 0;
         }
 
             .btn-search:hover {
@@ -172,7 +157,7 @@
 <div class="container">
     <div class="search-bar">
         <label>Nombre:</label>
-        <input type="text" placeholder="Escriba para buscar" class="form-control" id="idBusNombre" @bind-value="foodbus.Title" />
+        <input type="text" placeholder="Escriba para buscar" class="form-control" id="idBusTitulo" @bind-value="foodbus.Title" />
         <button class="btn-search" @onclick="BuscarFood">Buscar</button>
     </div>
 
@@ -210,12 +195,6 @@
                             <button class="btn btn-edit" @onclick="(() => goModify(food.Id))">
                                 <i class="fas fa-pencil-alt"></i>
                             </button>
-                            <button class="btn btn-view" @onclick="(() => goDetail(food.Id))">
-                                <i class="fas fa-eye"></i>
-                            </button>
-                            <button class="btn btn-delete" @onclick="(() => goDelete(food.Id))">
-                                <i class="fas fa-trash-alt"></i>
-                            </button>
                         </td>
                     </tr>
                 }
@@ -240,14 +219,22 @@
         }
     }
 
-    private async void BuscarFood()
+    private async Task BuscarFood()
     {
-        var result = await http.PostAsJsonAsync("foodTable/Buscar", foods);
-        var content = await result.Content.ReadAsStringAsync();
-        foods = JsonSerializer.Deserialize<foodTable[]>(content,
-            new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
-        StateHasChanged();
+        var result = await http.PostAsJsonAsync("foodTable/Buscar", foodbus);
+        if (result.IsSuccessStatusCode)
+        {
+            var content = await result.Content.ReadAsStringAsync();
+            foods = JsonSerializer.Deserialize<foodTable[]>(content, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+            StateHasChanged();
+        }
+        else
+        {
+            // Handle errors here (e.g., log them or show a message)
+            foods = Array.Empty<foodTable>();
+        }
     }
+
 
     void newFood()
     {

@@ -12,7 +12,7 @@
 
   <ItemGroup>
     <Reference Include="HotPlateRestaurant.EN">
-      <HintPath>..\..\..\HotPlateBurguer\HotPlateRestaurant.EN\bin\Debug\net8.0\HotPlateRestaurant.EN.dll</HintPath>
+      <HintPath>..\Dll\HotPlateRestaurant.EN.dll</HintPath>
     </Reference>
   </ItemGroup>
 

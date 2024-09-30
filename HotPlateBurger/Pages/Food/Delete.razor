@@ -1,5 +1,152 @@
-﻿<h3>Delete</h3>
+﻿@page "/food/delete/{pId:int}"
+@inject HttpClient http
+@inject NavigationManager NavManager;
+<head>
+    <style>
+        .container {
+            background-color: #F8F3CC;
+            border: solid 1px #808080;
+            padding-top: 40px;
+            padding-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .btn-delete {
+            background-color: #d9534f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+            font-weight: bold;
+        }
+
+        .btn-cancel {
+            background-color: transparent;
+            color: black;
+            border: 2px solid black;
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+            .btn-delete:hover, .btn-cancel:hover {
+                opacity: 0.8;
+            }
+
+        .button-container {
+            text-align: right;
+            margin-top: 30px;
+            padding-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #2C2C2C;
+        }
+    </style>
+</head>
+
+<PageTitle>Eliminar Comida</PageTitle>
+
+<h3>Eliminar Comida</h3>
+<input type="hidden" id="idFood" @bind-value="food.Id" />
+<div class="container">
+    <p>¿Está seguro de que desea eliminar esta comida?</p>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <label class="form-label">Imagen</label>
+            <input type="text" class="form-control" disabled id="idPicture" @bind-value="food.Picture" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <label class="form-label">Categoría</label>
+            <input type="text" class="form-control" disabled id="idCategory" @bind-value="food.CategoryId" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <label class="form-label">Titulo</label>
+            <input type="text" class="form-control" disabled id="idTitle" @bind-value="food.Title" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <label class="form-label">Precio</label>
+            <input type="number" class="form-control" disabled id="idPrice" @bind-value="food.Price" />
+        </div>
+    </div>
+</div>
+
+
+<div class="button-container">
+    <button class="btn btn-cancel" @onclick="Index">Cancelar</button>
+    <button class="btn btn-delete" @onclick="EliminarComida">Eliminar</button>
+</div>
+
+<div class="row">
+    <div class="col-sm-12">
+        <span style="color: red; font-weight: bold">@error</span>
+    </div>
+</div>
 
 @code {
+    foodTable food = new foodTable();
+    List<categoryTable> categories = new List<categoryTable>();
+    String error = "";
 
+    [Parameter]
+    public int pId { get; set; }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (pId != 0)
+        {
+            food = await http.GetFromJsonAsync<foodTable>("foodTable/" + pId);
+        }
+        else
+        {
+            error = "Comida seleccionada no válida";
+        }
+    }
+
+    public async Task EliminarComida()
+    {
+        if (food.Id == 0)
+        {
+            error = "No se ha seleccionado una comida válida para eliminar.";
+            return;
+        }
+
+        try
+        {
+            var resultado = await http.DeleteAsync("foodTable/" + food.Id);
+
+            if (resultado.IsSuccessStatusCode)
+            {
+                Index();
+            }
+            else
+            {
+                error = $"Error al eliminar la comida. Código de estado: {resultado.StatusCode}";
+            }
+        }
+        catch (Exception ex)
+        {
+            error = $"Ocurrió un error: {ex.Message}";
+        }
+    }
+
+
+
+
+    void Index()
+    {
+        NavManager.NavigateTo("food/index");
+    }
 }

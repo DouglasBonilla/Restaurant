@@ -1,5 +1,152 @@
-﻿<h3>Edit</h3>
+﻿@page "/food/edit/{pId:int}"
+@inject HttpClient http
+@inject NavigationManager NavManager;
+<head>
+    <style>
+        .container {
+            background-color: #F8F3CC;
+            border: solid 1px #808080;
+            padding-top: 40px;
+            padding-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .btn-save {
+            background-color: #f7a734;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+            font-weight: bold;
+        }
+
+        .btn-cancel {
+            background-color: transparent;
+            color: black;
+            border: 2px solid black;
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+            .btn-save:hover, .btn-cancel:hover {
+                opacity: 0.8;
+            }
+
+        .button-container {
+            text-align: right;
+            margin-top: 30px;
+            padding-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #2C2C2C;
+        }
+    </style>
+</head>
+
+<PageTitle>Editar Comida</PageTitle>
+
+<input type="hidden" id="idCategory" @bind-value="food.Id" />
+<h3>Modificar Comida</h3>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <label class="form-label">Nombre</label>
+            <input type="text" class="form-control" disabled id="idNombre" @bind-value="food.Picture" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <label class="form-label">Categoria</label>
+            <InputSelect id="categories" class="form-select" @bind-Value="food.CategoryId">
+                <option value="">Seleccione una categoría</option>
+                @foreach (var category in categories)
+                {
+                    <option value="@category.Id">@category.Name</option>
+                }
+            </InputSelect>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <label class="form-label">Titulo</label>
+            <input type="text" class="form-control"  id="idNombre" @bind-value="food.Title" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <label class="form-label">Precio</label>
+            <input type="number" class="form-control"  id="idNombre" @bind-value="food.Price" />
+        </div>
+    </div>
+</div>
+
+<div class="button-container">
+    <button class="btn btn-cancel" @onclick="Index">Regresar</button>
+    <button class="btn btn-save" @onclick="ModificarComida">Guardar</button>
+</div>
+
+<div class="row">
+    <div class="col-sm-12">
+        <span style="color: red; font-weight: bold">@error</span>
+    </div>
+</div>
+
 
 @code {
+    foodTable food = new foodTable();
+    List<categoryTable> categories = new List<categoryTable>();
+    String error = "";
 
+    [Parameter]
+    public int pId { get; set; }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        await LoadCategories();
+        if (pId != 0)
+        {
+            food = await http.GetFromJsonAsync<foodTable>("foodTable/" + pId);
+        }
+        else
+        {
+            error = "comida seleccionada no válida";
+        }
+    }
+
+    private async Task LoadCategories()
+    {
+        categories = await http.GetFromJsonAsync<List<categoryTable>>("categoryTable");
+    }
+    public async Task ModificarComida()
+    {
+        try
+        {
+            var resultado = await http.PutAsJsonAsync("foodTable/" + food.Id, food);
+
+            if (resultado.IsSuccessStatusCode)
+            {
+                NavManager.NavigateTo("/food/index");
+            }
+            else
+            {
+                error = $"Error al modificar la comida. Código de estado: {resultado.StatusCode}";
+            }
+        }
+        catch (Exception ex)
+        {
+            error = $"Ocurrió un error: {ex.Message}";
+        }
+    }
+
+    void Index()
+    {
+        NavManager.NavigateTo("/food/index");
+    }
 }

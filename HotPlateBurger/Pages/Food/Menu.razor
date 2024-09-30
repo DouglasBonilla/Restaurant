@@ -239,37 +239,6 @@
     </div>
 </div>
 
-@* <div class="category-container">
-    <div class="category">
-        <img src="images/call-bell.png" alt="All Categories" />
-        <span>All</span>
-    </div>
-    <div class="category">
-        <img src="images/hamburger.png" alt="Beef Burgers" />
-        <span>Beef Burgers</span>
-    </div>
-    <div class="category">
-        <img src="images/chicken.png" alt="Chicken" />
-        <span>Chicken</span>
-    </div>
-    <div class="category">
-        <img src="images/fried-potatoes.png" alt="Sides" />
-        <span>Sides</span>
-    </div>
-    <div class="category">
-        <img src="images/ice-drink.png" alt="Drinks" />
-        <span>Drinks</span>
-    </div>
-    <div class="category">
-        <img src="images/dessert-cake.png" alt="Desserts" />
-        <span>Desserts</span>
-    </div>
-    <div class="category" @onclick="ShowCartModal">
-        <img src="images/shopping-cart.png" alt="Cart" />
-        <span>Ver carrito</span>
-    </div>
-</div> *@
-
 @if (foods == null)
 {
     <p><em>Loading...</em></p>
@@ -470,7 +439,7 @@ else
             var response = await http.PostAsJsonAsync("orderTable", orderJson);
             if (response.IsSuccessStatusCode)
             {
-                ShowToast("Order placed successfully!");
+                ShowToast("Pedido realizado con éxito!");
                 CloseCartModal();
                 cart.Clear();
             }
