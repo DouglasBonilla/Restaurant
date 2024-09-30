@@ -168,17 +168,19 @@
             }
 
         .login-button {
-            background-color: #f9a825;
+            background-color: #FFAF36;
             color: white;
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
             font-size: 16px;
             cursor: pointer;
+            margin-top: 30px;
         }
 
             .login-button:hover {
-                background-color: #333;
+                background-color: #FF842C;
+                color: white;
             }
 
         .toast {
@@ -210,6 +212,7 @@
                 border: 1px solid #ddd;
                 border-radius: 4px;
             }
+
     </style>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
 </head>
@@ -265,16 +268,15 @@ else
     <div class="modal" style="display: block;">
         <div class="modal-content">
             <span class="close" @onclick="CloseCartModal">&times;</span>
-            <h2>Checkout</h2>
             <div class="customer-info">
-                <h3>Customer Information</h3>
-                <input type="text" @bind="customerName" placeholder="Name" />
-                <input type="text" @bind="address" placeholder="Address" />
-                <input type="email" @bind="email" placeholder="Email" />
-                <input type="tel" @bind="phone" placeholder="Phone" />
+                <h3>Información del cliente</h3>
+                <input type="text" @bind="customerName" placeholder="Nombre" />
+                <input type="text" @bind="address" placeholder="Dirección" />
+                <input type="email" @bind="email" placeholder="Correo Electrónico" />
+                <input type="tel" @bind="phone" placeholder="Teléfono" />
                 <input type="text" @bind="orders" placeholder="Additional Notes" style="visibility: hidden;" />
             </div>
-            <h3>Order Details</h3>
+            <h3 style="margin-top: -50px;">Productos seleccionados</h3>
             @if (cart.Any())
             {
                 foreach (var item in cart.GroupBy(f => f.Title).Select(g => g.First()))
@@ -287,16 +289,19 @@ else
                             <p class="price">$@item.Price</p>
                         </div>
                         <div class="quantity">
-                            <button @onclick="() => ChangeQuantity(item, -1)">-</button>
+                            <button style="background-color: #2F2F2F !important;" @onclick="() => ChangeQuantity(item, -1)">-</button>
                             <span>@quantity</span>
-                            <button @onclick="() => ChangeQuantity(item, 1)">+</button>
-                            <button class="remove-button" @onclick="() => RemoveAllItems(item)">
+                            <button style="background-color: #2F2F2F !important;" @onclick="() => ChangeQuantity(item, 1)">+</button>
+                            <button class="" style="background-color: #d02525 !important; " @onclick="() => RemoveAllItems(item)">
                                 <i class="fas fa-trash"></i>
                             </button>
                         </div>
                     </div>
                 }
-                <h3>Total: $@TotalPrice()</h3>
+              
+                    <h3>Total: $@TotalPrice()</h3>
+                
+
                 <button class="login-button" @onclick="SaveOrder">Finalizar pago</button>
             }
             else
@@ -442,6 +447,12 @@ else
                 ShowToast("Pedido realizado con éxito!");
                 CloseCartModal();
                 cart.Clear();
+
+                customerName = "";
+                address = "";
+                email = "";
+                phone = "";
+                orders = "";
             }
             else
             {
