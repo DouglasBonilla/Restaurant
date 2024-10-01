@@ -1,0 +1,22 @@
+﻿@page "/user/login"
+@inject HttpClient http
+@inject NavigationManager NavManager;
+
+
+<div>
+    <label for="username">Username:</label>
+    <InputText id="username" @bind-Value="user.Email" class="form-control" />
+</div>
+
+<div>
+    <label for="password">Password:</label>
+    <InputText id="password" @bind-Value="user.Password" type="password" class="form-control" />
+</div>
+
+<button type="submit" class="btn btn-primary">Login</button>
+
+@code {
+    userTable user = new userTable();
+
+}
+

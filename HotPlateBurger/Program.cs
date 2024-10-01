@@ -13,6 +13,11 @@ builder.Services.AddServerSideBlazor();
 //    BaseAddress = new Uri("http://HotPlateBurgerss.somee.com/api/")
 //});
 
+builder.Services.AddSignalR(options =>
+{
+    options.MaximumReceiveMessageSize = 1024 * 1024 * 10;  // 10 MB
+});
+
 builder.Services.AddScoped(sp => new HttpClient
 {
     BaseAddress = new Uri("https://localhost:7195/api/")

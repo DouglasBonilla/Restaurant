@@ -7,8 +7,28 @@
       "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\shared\\links.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\victo\\desktop\\restaurant\\hotplateburger\\pages\\user\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\pages\\user\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\victo\\desktop\\restaurant\\hotplateburger\\pages\\user\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\pages\\user\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\victo\\desktop\\restaurant\\hotplateburger\\pages\\food\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\pages\\food\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\victo\\desktop\\restaurant\\hotplateburger\\pages\\food\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\pages\\food\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\victo\\desktop\\restaurant\\hotplateburger\\pages\\order\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\pages\\order\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|c:\\users\\victo\\desktop\\restaurant\\hotplateburger\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7993932C-CAA0-4D7B-9471-731702D31870}|HotPlateBurger\\HotPlateBurger.csproj|solutionrelative:hotplateburger\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,8 +38,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -28,22 +60,86 @@
               "RelativeDocumentMoniker": "HotPlateBurger\\Shared\\Links.razor",
               "ToolTip": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\Shared\\Links.razor",
               "RelativeToolTip": "HotPlateBurger\\Shared\\Links.razor",
-              "ViewState": "AgIAAI0AAAAAAAAAAAAqwKIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAAAJ8AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-30T09:15:39.992Z",
+              "WhenOpened": "2024-10-01T23:40:22.812Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.razor",
+              "DocumentMoniker": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\Pages\\User\\Index.razor",
+              "RelativeDocumentMoniker": "HotPlateBurger\\Pages\\User\\Index.razor",
+              "ToolTip": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\Pages\\User\\Index.razor",
+              "RelativeToolTip": "HotPlateBurger\\Pages\\User\\Index.razor",
+              "ViewState": "AgIAAJYAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-01T23:24:37.409Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Login.razor",
+              "DocumentMoniker": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\Pages\\User\\Login.razor",
+              "RelativeDocumentMoniker": "HotPlateBurger\\Pages\\User\\Login.razor",
+              "ToolTip": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\Pages\\User\\Login.razor",
+              "RelativeToolTip": "HotPlateBurger\\Pages\\User\\Login.razor",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-01T23:24:18.912Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.razor",
+              "DocumentMoniker": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\Pages\\Order\\Index.razor",
+              "RelativeDocumentMoniker": "HotPlateBurger\\Pages\\Order\\Index.razor",
+              "ToolTip": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\Pages\\Order\\Index.razor",
+              "RelativeToolTip": "HotPlateBurger\\Pages\\Order\\Index.razor",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAAAJYAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-30T21:08:31.321Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.razor",
+              "DocumentMoniker": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\Pages\\Food\\Index.razor",
+              "RelativeDocumentMoniker": "HotPlateBurger\\Pages\\Food\\Index.razor",
+              "ToolTip": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\Pages\\Food\\Index.razor",
+              "RelativeToolTip": "HotPlateBurger\\Pages\\Food\\Index.razor",
+              "ViewState": "AgIAAMAAAAAAAAAAAAAAAOgAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-30T21:08:07.996Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\Program.cs",
+              "RelativeDocumentMoniker": "HotPlateBurger\\Program.cs",
+              "ToolTip": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\Program.cs",
+              "RelativeToolTip": "HotPlateBurger\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T19:35:52.634Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Create.razor",
               "DocumentMoniker": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\Pages\\Food\\Create.razor",
               "RelativeDocumentMoniker": "HotPlateBurger\\Pages\\Food\\Create.razor",
               "ToolTip": "C:\\Users\\Victo\\Desktop\\Restaurant\\HotPlateBurger\\Pages\\Food\\Create.razor",
               "RelativeToolTip": "HotPlateBurger\\Pages\\Food\\Create.razor",
-              "ViewState": "AgIAAKsAAAAAAAAAAAAUwLgAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAIwHkAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-30T08:55:01.954Z",
+              "WhenOpened": "2024-09-30T19:33:23.472Z",
               "EditorCaption": ""
             }
           ]
