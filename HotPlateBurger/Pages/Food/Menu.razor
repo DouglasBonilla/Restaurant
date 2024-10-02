@@ -349,7 +349,7 @@ else
     {
         try
         {
-            var token = await GetTokenFromLocalStorage();// Obtén el token de tu lógica de autenticación
+            var token = await GetTokenFromLocalStorage();
             HttpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token.ToString());
 
             categories = await http.GetFromJsonAsync<categoryTable[]>("categoryTable");
