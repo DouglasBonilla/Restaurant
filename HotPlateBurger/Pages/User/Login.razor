@@ -1,22 +1,51 @@
 ﻿@page "/user/login"
 @inject HttpClient http
 @inject NavigationManager NavManager;
+@inject IJSRuntime JS
+
 
 
 <div>
-    <label for="username">Username:</label>
-    <InputText id="username" @bind-Value="user.Email" class="form-control" />
+    <label for="email">Email:</label>
+    <InputText id="username" @bind-Value="login.Email" class="form-control" />
 </div>
 
 <div>
     <label for="password">Password:</label>
-    <InputText id="password" @bind-Value="user.Password" type="password" class="form-control" />
+    <InputText id="password" @bind-Value="login.Password" type="password" class="form-control" />
 </div>
 
-<button type="submit" class="btn btn-primary">Login</button>
+<button type="submit" class="btn btn-primary" @onclick=HandleLogin>Login</button>
 
 @code {
-    userTable user = new userTable();
+    LoginDto login = new LoginDto();
+
+    public async Task HandleLogin()
+    {
+        try
+        {
+            var response = await http.PostAsJsonAsync("login", login);
+            if (response.IsSuccessStatusCode)
+            {
+                var token = await response.Content.ReadAsStringAsync();
+                await SaveTokenToLocalStorage(token.ToString());
+            }
+            else
+            {
+                // Manejar error de autenticación aquí, como mostrar un mensaje al usuario
+                Console.WriteLine("Login failed.");
+            }
+        }
+        catch (Exception)
+        {
+            
+            throw;
+        }
+    }
+    private async Task SaveTokenToLocalStorage(string token)
+    {
+        await JS.InvokeVoidAsync("localStorage.setItem", "Token", token);
+    }
 
 }
 

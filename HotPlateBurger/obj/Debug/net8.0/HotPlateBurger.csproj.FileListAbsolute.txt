@@ -77,7 +77,6 @@ C:\Users\henry\Desktop\HotPlateBurger-Blazor\Restaurant\HotPlateBurger\bin\Debug
 C:\Users\henry\Desktop\HotPlateBurger-Blazor\Restaurant\HotPlateBurger\bin\Debug\net8.0\HotPlateBurger.dll
 C:\Users\henry\Desktop\HotPlateBurger-Blazor\Restaurant\HotPlateBurger\bin\Debug\net8.0\HotPlateBurger.pdb
 C:\Users\henry\Desktop\HotPlateBurger-Blazor\Restaurant\HotPlateBurger\bin\Debug\net8.0\HotPlateRestaurant.EN.dll
-C:\Users\henry\Desktop\HotPlateBurger-Blazor\Restaurant\HotPlateBurger\bin\Debug\net8.0\HotPlateRestaurant.EN.pdb
 C:\Users\henry\Desktop\HotPlateBurger-Blazor\Restaurant\HotPlateBurger\obj\Debug\net8.0\HotPlateBurger.csproj.AssemblyReference.cache
 C:\Users\henry\Desktop\HotPlateBurger-Blazor\Restaurant\HotPlateBurger\obj\Debug\net8.0\HotPlateBurger.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\henry\Desktop\HotPlateBurger-Blazor\Restaurant\HotPlateBurger\obj\Debug\net8.0\HotPlateBurger.AssemblyInfoInputs.cache
