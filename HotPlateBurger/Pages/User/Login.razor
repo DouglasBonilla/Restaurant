@@ -2,6 +2,7 @@
 @inject HttpClient http
 @inject NavigationManager NavManager;
 @inject IJSRuntime JS
+@layout LayoutEmpty
 
 <style>
     .login-background {
@@ -75,6 +76,7 @@
             {
                 var token = await response.Content.ReadAsStringAsync();
                 await SaveTokenToLocalStorage(token.ToString());
+                Index();
             }
             else
             {
@@ -84,10 +86,15 @@
         }
         catch (Exception)
         {
-            
+
             throw;
         }
     }
+    public void Index()
+    {
+        NavManager.NavigateTo("/food/menu");
+    }
+
     private async Task SaveTokenToLocalStorage(string token)
     {
         await JS.InvokeVoidAsync("localStorage.setItem", "Token", token);

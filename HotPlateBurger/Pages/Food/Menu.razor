@@ -68,9 +68,22 @@
             transition: background-color 0.3s;
         }
 
-            .cart-icon:hover {
-                background-color: #f9a825;
-            }
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: #f9a825;
+            color: white;
+            border-radius: 50%;
+            padding: 4px 8px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+
+        .cart-icon:hover {
+            background-color: #f9a825;
+        }
 
         .category-container {
             display: flex;
@@ -90,11 +103,27 @@
             width: 100px;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            color: black;
         }
 
             .category:hover {
                 background-color: #f9a825;
+                color: white; /* Cambiar texto a blanco en hover */
             }
+
+                .category:hover img {
+                    filter: brightness(0) invert(1); /* Cambiar icono a blanco en hover */
+                }
+
+            .category.selected {
+                background-color: #f9a825;
+                color: white; /* Texto blanco para la categoría seleccionada */
+            }
+
+                .category.selected img {
+                    filter: brightness(0) invert(1); /* Icono blanco para la categoría seleccionada */
+                }
+
 
             .category img {
                 width: 40px;
@@ -116,7 +145,7 @@
 
         .modal-content {
             background-color: #fefefe;
-            width: 80%;
+            width: 90%; /* Ajusta esto según tu preferencia */
             max-width: 600px;
             max-height: 80vh;
             overflow-y: auto;
@@ -124,7 +153,10 @@
             border: 1px solid #888;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: auto; /* Esto ayuda a centrar horizontalmente */
+            margin-top: 150px;
         }
+
 
         .close {
             color: #aaa;
@@ -216,6 +248,10 @@
                 border-radius: 4px;
             }
 
+        .icon:hover {
+            color: white;
+        }
+
     </style>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
 </head>
@@ -225,7 +261,7 @@
         <img src="images/call-bell.png" alt="All Categories" />
         <span>All</span>
     </div>
-    @if(categories == null)
+    @if (categories == null)
     {
         <p><em>Loading...</em></p>
     }
@@ -233,7 +269,8 @@
     {
         @foreach (var category in categories)
         {
-            <div class="category" @onclick="() => FilterByCategory(category.Id)">
+            <div class="category @(selectedCategoryId == category.Id ? "selected" : "")"
+                 @onclick="() => SelectCategory(category.Id)">
                 <img src="@category.Icon" alt="@category.Name" />
                 <span>@category.Name</span>
             </div>
@@ -242,6 +279,12 @@
     <div class="category" @onclick="ShowCartModal">
         <img src="images/shopping-cart.png" alt="Cart" />
         <span>Ver carrito</span>
+
+        @if (cart.Count > 0)
+        {
+            Console.WriteLine(cart.Count);
+            <span class="cart-count">@cart.Count</span>
+        }
     </div>
 </div>
 
@@ -301,9 +344,9 @@ else
                         </div>
                     </div>
                 }
-              
-                    <h3>Total: $@TotalPrice()</h3>
-                
+
+                <h3>Total: $@TotalPrice()</h3>
+
 
                 <button class="login-button" @onclick="SaveOrder">Finalizar pago</button>
             }
@@ -335,6 +378,14 @@ else
     private string phone = "";
     private string orders = "";
 
+    private int selectedCategoryId;
+
+    private void SelectCategory(int categoryId)
+    {
+        selectedCategoryId = categoryId;
+        FilterByCategory(categoryId);
+    }
+
     protected override async Task OnInitializedAsync()
     {
         await LoadFoods();
@@ -354,7 +405,7 @@ else
 
             categories = await http.GetFromJsonAsync<categoryTable[]>("categoryTable");
             foods = await http.GetFromJsonAsync<foodTable[]>("foodTable");
-            
+
         }
         catch (Exception ex)
         {
